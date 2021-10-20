@@ -4,6 +4,12 @@
 
 This guide explains how to gear up and play a White Mage to acceptable levels with the goal of eventually acquiring at least a few Best-In-Slot (BiS) pieces. It does not list [comprehensive gear sets](https://ffxiah.com/forum/topic/55005/on-healing-hands-a-comprehensive-whm-guide-v3/) or [specific end-game fight strategies](https://bg-wiki.com/). There are already excellent guides for those things; this guide is to help you get started.
 
+## Table of Contents
+
+[Expectations and Assumptions](#expectations-and-assumptions)
+[The Very Basics](#the-very-basics)
+[Responsible & Ethical Healing Practices](#responsible--ethical-healing-practices)
+[Gear](#gear)
 
 ## Expectations and Assumptions
 
@@ -77,7 +83,7 @@ There are five WHM job abilities you should care about:
 
 * [Afflatus Solace](https://www.bg-wiki.com/ffxi/Afflatus_Solace) should be your default option. Make sure it's active before you start fights.
 * [Afflatus Misery](https://www.bg-wiki.com/ffxi/Afflatus_Misery) is mostly useful until if and when you get a Yagrush. While Misery is active, you can use Esuna to remove debuffs from your entire group if you also have the same debuff. This is especially useful for Amnesia, as well as fights where a monster uses multiple debuffs at the same time. For example, you should switch to Misery just before fighting RDM and BLU monsters in Dynamis, because these monsters tend to debuff your entire party rapidly. But when you're done fighting those monsters, switch back to Solace.
-* [Devotion](https://www.bg-wiki.com/ffxi/Devotion) helps your tanks (and less often, other mage jobs) avoid downtime by restoring their MP. Remember to heal yourself after, though.
+* [Devotion](https://www.bg-wiki.com/ffxi/Devotion) helps your tanks (and less often, other mage jobs) avoid downtime by restoring their MP. Remember to heal yourself after you use it, though.
 * [Sacrosanctity](https://www.bg-wiki.com/ffxi/Sacrosanctity) helps prevent deaths from monsters' Mijin Gakure, Astral Flow, and other major damage abilities.
 * Use [Asylum](https://www.bg-wiki.com/ffxi/Asylum) for bosses that have nasty debuffs. It only lasts 30 seconds, though.
 
@@ -351,7 +357,7 @@ If you're just starting out:
 Medium effort, big reward:
 
 * [Malignance Pole](https://www.bg-wiki.com/ffxi/Malignance_Pole) has 20% -DT, which is a very large chunk (20/50 cap) for one item.
-* [Kaja Rod](https://www.bg-wiki.com/ffxi/Kaja_Rod) offers a lot of enfeebling and nuking stats, and significantly boosts your Black Halo damage.
+* [Kaja Rod](https://www.bg-wiki.com/ffxi/Kaja_Rod) offers a lot of enfeebling and nuking stats. The Black Halo damage is nice, too.
 * [Embla Sash](https://www.bg-wiki.com/ffxi/Embla_Sash) is 1000 Domain Incursion points, but it's best-in-slot for your Enhancing set and the other stats are useful too.
 * [Lengo Pants](https://www.bg-wiki.com/ffxi/Lengo_Pants), [Fanatic Gloves](https://www.bg-wiki.com/ffxi/Fanatic_Gloves), and [Serenity](https://www.bg-wiki.com/ffxi/Serenity) are all useful pieces from Sinister Reign, with and without augments.
 * [Cleric's Torque](https://www.bg-wiki.com/ffxi/Cleric's_Torque) lets you Erase two debuffs at once. The high-quality versions are nice, but entirely optional.
