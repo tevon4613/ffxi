@@ -7,9 +7,9 @@ This guide explains how to gear up and play a White Mage to acceptable levels wi
 ## Table of Contents
 
 [Expectations and Assumptions](#expectations-and-assumptions)
-[The Very Basics](#the-very-basics)
-[Responsible & Ethical Healing Practices](#responsible--ethical-healing-practices)
-[Gear](#gear)
+<br/>[The Very Basics](#the-very-basics)
+<br/>[Responsible & Ethical Healing Practices](#responsible--ethical-healing-practices)
+<br/>[Gear](#gear)
 
 ## Expectations and Assumptions
 
