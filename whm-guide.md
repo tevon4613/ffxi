@@ -209,14 +209,18 @@ White Mages have many useful buffs, both for yourself and others. This list is i
 ### Merits and Job Points
 
 Initially, you should invest WHM merit points as follows:
-	5	Cure Cast Time
-	5	Bar Spell Effect
-	5	Devotion
-	5	Animus Solace
+```
+5	Cure Cast Time
+5	Bar Spell Effect
+5	Devotion
+5	Animus Solace
+```
 
 As your Precast set reaches 40-80 Fast Cast, move points from Cure Cast Time to Regen Effect so that your merits are instead:
-	0	Cure Cast Time
-	5	Regen Effect
+```
+0	Cure Cast Time
+5	Regen Effect
+```
 
 As you gain job points, spend them in this order:
 1. Afflatus Solace Effect
