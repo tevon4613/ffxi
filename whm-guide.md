@@ -265,50 +265,51 @@ When you have at least those three sets ready, start building a few more:
 
 At this point, you are making your existing sets better, or making very specific sets for more niche purposes. Note that many of these sets have Conserve MP as a preferred stat. You don't need to build a Conserve MP set specifically, but filling gaps in each set with Conserve MP will make you much more self-sufficient.
 
-*Idle Set*: -50 Damage Taken -> Refresh
-You will eventually want three idle sets: maximum refresh, maximum DT, and maximum magic evasion.
+**Idle Set**: -50 Damage Taken -> Refresh
+<br />You will eventually want three idle sets: maximum refresh, maximum DT, and maximum magic evasion.
 
-*Precast Set*: 80 Fast Cast (hard cap)
+**Precast Set**: 80 Fast Cast (hard cap)
 * SCH subjob with Light Arts active gives you 10 Fast Cast for healing spells.
 * RDM subjob has 15 Fast Cast.
 
-*Quick Set: 10 Quick Magic -> Conserve MP -> Haste/Fast Cast*
+**Quick Set: 10 Quick Magic -> Conserve MP -> Haste/Fast Cast**
 * Use this set for casting Raise/Reraise, Arise, teleport spells, and all -na spells (except for Cursna).
 * If you use this for Erase, make sure your set includes the WHM necklace with Erase +1.
 
-*Healing Set*
-You should eventually have separate sets for Cure and Cura/Curaga spells, because they do not benefit from Afflatus Solace. The stat priorities for healing are, in this order:
+**Healing Set**
+<br />You should eventually have separate sets for Cure and Cura/Curaga spells, because they do not benefit from Afflatus Solace. The stat priorities for healing are, in this order:
   1. Cure Potency II 30 (hard cap, but you won't reach this)
   2. Afflatus Solace potency (as much as you can get)
   3. Cure Potency 50 (hard cap)
   4. -50 Enmity (hard cap)
   5. Conserve MP
   6. (1 healing skill = 2 MND = 5 VIT) for additional healing output
+
 Initially, you will not have many options for Cure Potency II or Afflatus Solace, and it'll be a struggle to get 50 Cure Potency. Eventually you'll get more gear options to mix and match.
 
-*Cursna Set*: Cursna +xx -> Healing Magic skill -> (Haste/Fast Cast) -> Conserve MP
-When starting out, you should expect to cast Cursna 3-4 times per Doom. See [Chiaia's wonderful Cursna calculator](http://chiaia.optic-ice.com/Cursna.html) for more information on how these stats translate to % success rate.
+**Cursna Set**: Cursna +xx -> Healing Magic skill -> (Haste/Fast Cast) -> Conserve MP
+<br />When starting out, you should expect to cast Cursna 3-4 times per Doom. See [Chiaia's wonderful Cursna calculator](http://chiaia.optic-ice.com/Cursna.html) for more information on how these stats translate to % success rate.
 
-*Enhancing Set*: Duration -> Conserve MP
-You should eventually use separate sets for Regen, Bar- spells, and Enhancing Skill (Boost- spells), each of which have equipment that boosts their potencies. However, all of those sets can use this set as their base.
+**Enhancing Set**: Duration -> Conserve MP
+<br />You should eventually use separate sets for Regen, Bar- spells, and Enhancing Skill (Boost- spells), each of which have equipment that boosts their potencies. However, all of those sets can use this set as their base.
 
-*Enfeebling*: (MND/Magic Accuracy/Enfeebling Magic skill) -> Conserve MP
-If you regularly use a /RDM subjob, consider making a separate INT-based enfeebling set.
+**Enfeebling**: (MND/Magic Accuracy/Enfeebling Magic skill) -> Conserve MP
+<br />If you regularly use a /RDM subjob, consider making a separate INT-based enfeebling set.
 
 ### Damage Sets
 
 Most parties will not be structured to give you damage-dealing buffs. Still, you can solo your own Apex monsters with trusts if you are prepared to make the appropriate sets.
 
-*Nuking Set*: (Magic Atk. Bonus/Magic damage) -> (MND/Magic Accuracy/Divine Magic skill) -> Haste
+**Nuking Set**: (Magic Atk. Bonus/Magic damage) -> (MND/Magic Accuracy/Divine Magic skill) -> Haste
 * Initially, your nuke set will look very similar to your enfeebling set.
 * Healing with Afflatus Solace active will increase your Holy/Holy II spell damage.
 * Consider a separate set with Magic Burst damage.
 
-*TP Set*: Accuracy -> Double/Triple/Quad Attack -> Store TP -> DEX
+**TP Set**: Accuracy -> Double/Triple/Quad Attack -> Store TP -> DEX
 * When in doubt, aim for 1200 accuracy without food buffs. Use /checkparam to see your current accuracy.
 * Consider separate sets for content that requires high, medium, and low accuracy.
 
-*Weaponskill Sets*: Attack -> Weapon Skill Damage -> (varies)
+**Weaponskill Sets**: Attack -> Weapon Skill Damage -> (varies)
 * Each weapon skill has its own stat priorities, but in general, you need as much Attack as you can get.
 * Consider building sets for Hexa Strike, Black Halo, and Realmrazer specifically.
 * Mystic Boon is excellent for restoring MP but involves more than other quests.
