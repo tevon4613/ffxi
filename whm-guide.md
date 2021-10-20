@@ -191,8 +191,8 @@ White Mages have many useful buffs, both for yourself and others. This list is i
     * Paladins' Shield Barrier trait means they can cast a better Protect. Let them do it.
     * Recast these as soon as possible on people you Raise.
 6. Maintain Boost-STR for most groups.
-	* Use Boost-DEX if your group is missing lots of attacks, or if your group's biggest damage dealers are THF, DNC, and BLU.
-	* Use Boost-AGI if your group has a majority of NIN, RNG, and COR.
+	* Use Boost-DEX if your group is missing lots of attacks, or if your group's biggest damage dealers are THF, DNC, NIN, and BLU.
+	* Use Boost-AGI if your group has a majority of RNG and COR.
 	* Use Boost-INT if your group has a majority of BLM, GEO, RDM, and SCH.
 	* Use Boost-MND if it's just you, or if you desperately need to avoid Silence/Slow/Paralyze resists.
 	* Boost-VIT and CHR are only useful for feeding junk buffs to monsters that absorb them.
