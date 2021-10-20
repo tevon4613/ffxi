@@ -124,6 +124,7 @@ The third and final rule for WHM is to triage smartly: prevent imminent death, t
 10. Rebuff yourself and party members
 
 ... and finally, IF you are confident that you can avoid priorities 1-5 for two seconds:
+
 11. Debuff monsters
 12. Damage monsters with spells or your weapon
 
