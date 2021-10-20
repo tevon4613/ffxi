@@ -73,7 +73,7 @@ Use SCH as your subjob most of the time:
 
 A RDM subjob can also be useful:
 
-* 15% [Fast Cast](https://www.bg-wiki.com/ffxi/Fast_Cast) on all spells, not just your current Light/Dark Arts
+* 15% [Fast Cast](https://www.bg-wiki.com/ffxi/Fast_Cast) on all spells
 * [Refresh](https://www.bg-wiki.com/ffxi/Refresh) is not very potent, but you can cast it on yourself consistently
 * [Convert](https://www.bg-wiki.com/ffxi/Convert) is a full MP restore every 10 minutes
 * [Phalanx](https://www.bg-wiki.com/ffxi/Phalanx) further reduces your damage taken and pairs well with Stoneskin
@@ -236,7 +236,10 @@ As you gain job points, spend them in this order:
 6. Sacrosanctity Effect
 7. (all others)
 
+
 ## Gear
+
+This guide focuses mostly on beginning gear, with notes on a few key pieces and job-specific equipment (JSE) that you want to upgrade. For complete gear recommendations and sets, see [the FFXIAH WHM guide, v3](https://ffxiah.com/forum/topic/55005/on-healing-hands-a-comprehensive-whm-guide-v3/).
 
 ### Basic Sets and Their Priorities
 
@@ -249,17 +252,17 @@ Your immediate goal is to start building three basic sets, and aim for some mini
 	* Your biggest goal is to get 30 Cure Potency.
 	* Equip items with -Enmity or Conserve MP in other slots
 3. Idle (-20 Damage Taken, 2 Refresh)
-	* Yes, you want a Defending Ring eventually, just like every other job.
+	* Yes, you want a [Defending Ring](https://www.bg-wiki.com/ffxi/Defending_Ring) eventually, just like every other job.
 	* Equip items with high DEF or Magic Evasion in other slots.
-	* Consider purchasing a pair of Herald's Gaiters for idle movement speed. Running away is great for avoiding damage!
+	* Consider purchasing a pair of [Herald's Gaiters](https://www.bg-wiki.com/ffxi/Herald%27s_Gaiters) for idle movement speed. Running away is great for avoiding damage!
 
 When you have at least those three sets ready, start building a few more:
 
 4. Enhancing
-	* Acquire a full set of Telchine gear, and [augment it](https://www.bg-wiki.com/ffxi/Alluvion_Skirmish_Armor) with [Divainy-Gamainy](https://www.bg-wiki.com/ffxi/Divainy-Gamainy).
-	* To augment Telchine, get Snowslit and Snowdim NQ or +1 stones for Magic Evasion, Leafdim +1 and +2 stones for Conserve MP, and Duskdim +1 and +2 stones for Enhancing Magic Duration.
+	* Acquire a full set of [Telchine gear](https://www.bg-wiki.com/ffxi/Category:Alluvion_Skirmish_Armor#Telchine_Armor_Set), and [augment it](https://www.bg-wiki.com/ffxi/Alluvion_Skirmish_Armor) with [Divainy-Gamainy](https://www.bg-wiki.com/ffxi/Divainy-Gamainy).
+	* You will need Snowslit/Snowdim normal quality or +1 stones for Magic Evasion, Leafdim +1 and +2 stones for Conserve MP, and Duskdim +1 and +2 stones for Enhancing Magic Duration.
 5. Cursna
-	* Purchase at least one Ephedra Ring and a Malison Medallion to get started, and build at least one WHM Ambuscade cape.
+	* Purchase at least one [Ephedra Ring](https://www.bg-wiki.com/ffxi/Ephedra_Ring) and a [Malison Medallion](https://www.bg-wiki.com/ffxi/Malison_Medallion) to get started, and build at least one WHM Ambuscade cape.
 	* Equip items with Healing Magic skill and Haste/Fast Cast in slots that do not have "Cursna +XX" potency.
 6. Enfeebling
 	* MND, Magic Accuracy, and Enfeebling Skill items are all helpful.
@@ -288,7 +291,7 @@ At this point, you are making your existing sets better, or making very specific
   3. Cure Potency 50 (hard cap)
   4. -50 Enmity (hard cap)
   5. Conserve MP
-  6. (1 healing skill = 2 MND = 5 VIT) for additional healing output
+  6. (1 healing skill == 2 MND == 5 VIT) for additional healing output
 
 Initially, you will not have many options for Cure Potency II or Afflatus Solace, and it'll be a struggle to get 50 Cure Potency. Eventually you'll get more gear options to mix and match.
 
@@ -300,6 +303,7 @@ Initially, you will not have many options for Cure Potency II or Afflatus Solace
 
 **Enfeebling**: (MND/Magic Accuracy/Enfeebling Magic skill) -> Conserve MP
 <br />If you regularly use a /RDM subjob, consider making a separate INT-based enfeebling set.
+
 
 ### Damage Sets
 
@@ -327,12 +331,12 @@ Collect ilvl 109 versions of your Artifact (Theophany), [Relic (Piety)](https://
 1. [Ebers Pantaloons](https://www.bg-wiki.com/ffxi/Ebers_Pantaloons) (E legs)
 2. [Ebers Bliaut](https://www.bg-wiki.com/ffxi/Ebers_Briault) (E body)
 3. [Ebers Cap](https://www.bg-wiki.com/ffxi/Ebers_Cap) (E head)
-4. [Piety Briault](https://www.bg-wiki.com/ffxi/Piety_Briault) (R body)
+4. [Piety Bliaut](https://www.bg-wiki.com/ffxi/Piety_Briault) (R body)
 5. [Piety Pantaloons](https://www.bg-wiki.com/ffxi/Piety_Pantaloons) (R legs)
 6. [Ebers Mitts](https://www.bg-wiki.com/ffxi/Ebers_Mitts) (E hands)
 7. [Theophany Pantaloons](https://www.bg-wiki.com/ffxi/Theophany_Attire_Set) (A legs)
 8. [Theophany Mitts](https://www.bg-wiki.com/ffxi/Theophany_Mitts) (A hands)
-9. [Theophany Briault](https://www.bg-wiki.com/ffxi/Theophany_Briault) (A body)
+9. [Theophany Bliault](https://www.bg-wiki.com/ffxi/Theophany_Briault) (A body)
 
 The Ebers Pantaloons should be the very first thing you upgrade. The general priority for other upgrades is similar:
 
@@ -340,7 +344,18 @@ The Ebers Pantaloons should be the very first thing you upgrade. The general pri
 * Relic/Piety: body -> legs -> (head/hands/feet optional)
 * Empyrean/Ebers: legs -> body -> head -> hands -> (feet optional)
 
-... such that you work towards maximum (+3/+3/+1) upgrades for the non-optional pieces. You should also collect the Inyanga Tiara (head) and Inyanga Jubbah (body) from Ambuscade, and +2 both of them when possible.
+... such that you eventually work towards maximum (+3/+3/+1) upgrades for these non-optional pieces. You should also collect the [Inyanga Tiara](https://www.bg-wiki.com/ffxi/Inyanga_Tiara) for a Regen set and [Inyanga Jubbah](https://www.bg-wiki.com/ffxi/Inyanga_Jubbah) for your Precast set. Both are from Ambuscade, and you should upgrade both of them to +2 when possible.
+
+
+### Other JSE Gear
+
+Most WHM job-specific equipment is useful in some situations, but the optional pieces not required for a WHM's core purposes: healing, erasing, and buffing.
+
+* Artifact: [Theophany Duckbills +3](https://www.bg-wiki.com/ffxi/Theophany_Duckbills_%2B3) are useful for enfeebling.
+* Relic: [Piety Mitts +3](https://www.bg-wiki.com/ffxi/Piety_Mitts_%2B3) are good for divine magic. You may also want to acquire the 109 [Piety Cap](https://www.bg-wiki.com/ffxi/Piety_Cap) for augmenting Devotion, and the 109 [Piety Duckbills](https://www.bg-wiki.com/ffxi/Piety_Duckbills) for Afflatus Solace, but they are only worth upgrading to +3 if you plan to melee.
+* Empyrean: [Ebers Duckbills +1](https://www.bg-wiki.com/ffxi/Ebers_Duckbills_%2B1) are useful for Auspice and Bar-spells.
+* Ambuscade: [Inyanga Dastanas +2](https://www.bg-wiki.com/ffxi/Inyanga_Dastanas_%2B2) are good for INT-based enfeebling. Other Inyanga pieces are useful for idle magic evasion and defense.
+* Ambuscade: Ayanmo items can fill in gaps in your idle set for overall -DT (reducing Damage Taken). [Ayanmo Corazza +2](https://www.bg-wiki.com/ffxi/Ayanmo_Corazza_%2B2) is notable for its Double Attack +7% for melee sets.
 
 
 ### Notable Gear
@@ -365,7 +380,7 @@ Medium effort, big reward:
 
 ### Ambuscade Capes
 
-I recommend at making least two capes. You will have to give up a major source of either Fast Cast or Cure Potency if you only make one.
+I recommend at [making least two Ambuscade capes](https://www.bg-wiki.com/ffxi/Category:JSE_Capes#Ambuscade_Capes). You will have to give up a major source of either Fast Cast or Cure Potency if you only make one. 
 
 Cape 1, Idle & Precast sets
 * Thread: HP +60
@@ -380,31 +395,3 @@ Cape 2, Healing & Enfeebling sets
 * Sap: "Cure" Potency +10%
 * Resin: Damage Taken -5%
 * Dye: Magic Accuracy +10
-
-If you intend to melee, you'll also need at least two more:
-
-Cape 3, TP set
-* Thread: DEX +20
-* Dust: Accuracy +20/Attack+20
-* Sap: Double Attack +10%
-* Resin: Damage Taken -5%
-* Dye: Accuracy +10
-
-Cape 4, Weapon Skill sets
-* Thread: MND +20
-* Dust: Accuracy +20/Attack+20
-* Sap: Weapon Skill Damage +10%
-* Resin: Damage Taken -5%
-* Dye: Attack +10 --OR-- MND +10
-
-### Other Gear
-
-Most WHM job-specific equipment is useful, but not required for a WHM's core purposes: healing, erasing, and buffing. Also, this isn't a comprehensive gear guide.
-
-* Artifact/Theophany Duckbills +3 are useful for enfeebling.
-* Relic/Piety Mitts +3 is good for divine magic. Other Relic/Piety pieces are only useful for TP or weapon skill sets.
-* Empyrean/Ebers Duckbills +1 are useful for Auspice and barspells.
-* Ambuscade/Inyanga Dastanas +2 are good for INT-based enfeebling. Other Ambuscade/Inyanga pieces are useful for idle magic evasion and defense.
-* Ambuscade/Ayanmo items can fill in gaps in your idle set for overall -DT (reducing Damage Taken).
-
-For more gear recommendations and sets, see [the FFXIAH WHM guide, v3](https://ffxiah.com/forum/topic/55005/on-healing-hands-a-comprehensive-whm-guide-v3/).
