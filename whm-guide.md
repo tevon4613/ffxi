@@ -2,7 +2,7 @@
 
 > _tri·age (n): the sorting of and allocation of treatment to patients and especially battle and disaster victims according to a system of priorities designed to maximize the number of survivors_
 
-This guide explains how to gear up and play a White Mage to acceptable levels with the goal of eventually acquiring at least a few Best-In-Slot (BiS) pieces. It does not list [comprehensive gear sets](https://ffxiah.com/forum/topic/55005/on-healing-hands-a-comprehensive-whm-guide-v3/) or [specific end-game fight strategies](https://bg-wiki.com/). There are already excellent guides for those things; this guide is to help you get started.
+This guide explains how to gear up and play a White Mage to acceptable levels with the goal of eventually acquiring at least a few Best-In-Slot (BiS) pieces. It does not list [comprehensive gear sets](https://ffxiah.com/forum/topic/55005/on-healing-hands-a-comprehensive-whm-guide-v3/) or [specific end-game fight strategies](https://bg-wiki.com/). This guide is to help you get started.
 
 ## Table of Contents
 
@@ -18,7 +18,7 @@ You should know and understand the following concepts:
 * `buff` and `debuff` are positive (Enhancing Magic) and negative (Enfeebling Magic) status effects
 * `cureskin` is the temporary stoneskin effect applied when you heal with Afflatus Solace active
 * `-na spells` remove debuffs; they include Cursna, Stona, Erase, and Esuna among others
-* `bar- spells` include buffs that reduce elemental damage (e.g., Barfira) and the chance of status debuffs (e.g., Barpetrify)
+* `Bar- spells` include buffs that reduce elemental damage (like Barfira) and the chance of status debuffs (like Barpetra)
 
 You should have also already:
 
@@ -97,23 +97,23 @@ And three WHM job abilities that are still useful, but less so:
 ## Responsible & Ethical Healing Practices
 
 The first rule for WHM is to pay attention. If you cannot:
-* Notify your party when you are away from your keyboard
-* Focus on your party's health bars, rather than damage dealing
-* Maintain basic situational awareness from monster animations and the chat log
-* Triage and make educated decisions about what to do next, from moment to moment
+* Notify your party when you go away from your keyboard or "AFK"
+* Focus on your party's health, rather than damage dealing
+* Watch monster animations and the chat log to maintain basic situational awareness
+* Triage by making educated decisions about what to do next, from moment to moment
 
 ... then you should play a different job. A healer trust is better than a real player who can't do these things.
 
-That said, you can't always heal through everything, and there will often be times you have to choose between bad and worse outcomes. Your party members will get one-shot, go AFK without warning, forget to buff you, and stand in the Firaga V. You yourself will press the wrong macro key, heal the wrong person, get one-shot, and stand in the Firaga V. Your job is to do your best to keep everyone alive despite inevitable mistakes.
+That said, you can't always heal through everything, and there will be times you need to choose between bad and worse outcomes. Your party members will die in one hit, go AFK without warning, forget to buff you, run away when you cast buff spells, run away when you try to heal them, and stand in the Firaga V. You yourself will press the wrong macro keys, heal the wrong person, die in one hit, and stand in the Firaga V. Your job is to do your best to keep everyone alive despite inevitable mistakes.
 
-By default, you should focus your efforts on essential party members first (tank jobs and yourself), then support jobs, and finally damage dealers. Similarly, you should also take care of your party first and then help alliance members if you're able. There are always exceptions to these rules, and that's why ...
+Focus your efforts on essential party members first (tank jobs and yourself), then other support jobs, and finally damage dealers. Similarly, you should also take care of your party first and then help alliance members if you're able. There are always exceptions to these rules, and that's why ...
 
 The second rule is to be prepared. Fighting a new boss, or jumping into content you've never healed before? Do a little research. As a WHM, you want to know:
 * Which monster abilities do lots of damage?
 * Which monster abilities result in debuffs?
 * Which monster abilities can be avoided by staying out of range?
 
-Sometimes, this knowledge can be the difference between a successful fight and a wipe. Most of the time, it just makes your job a lot less stressful. See the section "Sweat the Small Things" below for more.
+Sometimes, this knowledge can be the difference between a successful fight and a wipe. Most of the time, it just makes your job a lot less stressful. If you're not convinced already, see the section "Sweat the Small Things" below for why you should care.
 
 The third and final rule for WHM is to triage smartly: prevent imminent death, then fix problems, then do improvements. Or, in more detail:
 
@@ -135,19 +135,29 @@ The third and final rule for WHM is to triage smartly: prevent imminent death, t
 
 Even in the very best groups with the most ridiculously geared party members, this should be enough to keep you busy all the time. If you find yourself not doing anything for a minute or more, you're probably overlooking something that could help you and your party.
 
+When you do not have a Red Mage available:
+* Silence helps against monsters that can cast spells
+* Addle gives you more time to react when a monster is no longer silenced
+* Dia II reduce monster defense
+* Paralyze and Slow reduce monster attack speed
+
+Banish spells can be useful when fighting larger groups of undead monsters. They reduce defense on all skeletons, ghosts, Fomor, and several other monster families. You should avoid casting Banishga unless you know that your tank has hit all nearby monsters.
+
+As a WHM, you also have one crowd control spell: [Repose](https://www.bg-wiki.com/ffxi/Repose). This is a single-target, Light-elemental sleep spell with a long recast time. Repose is difficult to cast on higher-level monsters, but it can easily keep a Charmed player from causing more problems.
+
 
 ### Sweat the Small Things
 
-Why you should bother? It sounds like a lot of work to look up fight mechanics, worry about bar-spells, remove the minor debuffs, and "try hard" in general. This is where we appeal to the selfish loot whore that we know lurks deep inside you. Even if you don't care about your party members--isn't Raise in the game for a reason?--paying a little attention to mechanics will 100% make your life easier in the long run.
+Why you should bother? It sounds like a lot of work to look up fight mechanics, worry about Bar- spells, remove minor debuffs, and "try hard" in general. This is where we appeal to the selfish loot whore that we know lurks deep inside you. Even if you don't care about your party members—_isn't Raise in the game for a reason?_—paying a little attention to mechanics will make your life easier in the long run.
 
 As an example, let's say your entire party gets hit by Drown. No big deal, it's just a tiny bit of damage. But a minute later, the monster uses Def Down + Magic Def Down on your entire party, and then it starts casting Meteor. Your tank is taking 20-50% more damage, you can't guarantee that your next Erase will remove the Magic Def Down debuff, and you've got 500+ damage coming in two seconds. This is not a situation you want to be in.
 
 So, before your next fight:
 
 1. Use your favorite search engine to look up the monster, battlefield, or zone name.
-2. Make a note of all the interesting attacks it has, including attacks inherited from its monster family.
-3. Cross-reference the attacks against the table here.
-4. Cast buffs that will mitigate or prevent the attack and refresh them as necessary.
+2. Note the interesting attacks it has, including attacks inherited from its monster family.
+3. Cross-reference the attacks against the table below, and prepare to run away from the attack if you can.
+4. Cast buffs that will mitigate or prevent the attack, and refresh them as necessary.
 
 | Preventable Debuffs               | Barspells to use             |
 |-----------------------------------|------------------------------|
@@ -160,22 +170,22 @@ So, before your next fight:
 | Lullaby			    | Barsleepra                   |
 | Blind, Sleep			    | Barblindra/Barsleepra        |
 
-This should only take a minute or two at the most. You don't have to memorize all the monster's mechanics (or this debuff list), but you should strongly consider making a bookmark, post-it on your monitor, or similar note for yourself. If you have a second monitor, move Netflix off to the side and keep a browser window handy as your cheat sheet.
+_This should only take a minute or two at the most._ You don't have to memorize all the monster's mechanics (or this debuff list), but you should strongly consider making a bookmark, post-it on your monitor, or similar note for yourself. If you have a second monitor, move Netflix off to the side and keep a browser window handy as your cheat sheet.
 
-When a debuff has both an associated element and a bar-status spell, use both. For example, either Barparalyzra or Barblizzara will help reduce the chance that a monster can Paralyze you, while both together have an even higher chance of preventing Paralyze.
+When a debuff has both an associated element and a bar-status spell, use both. For example, either Barparalyzra or Barblizzara will help reduce the chance that a monster can Paralyze you, while both together have an even higher chance of preventing Paralyze. Combine this with Divine Caress when people do get hit, and tough situations can become much less frantic.
 
-For situations where a monster has lots of potential attacks, prevent the worst ones first. By default:
+For situations where a monster has lots of potential attacks, you should prevent the worst debuffs:
 1. [Sleep](https://www.bg-wiki.com/ffxi/Sleep_(Status)), [Stun](https://www.bg-wiki.com/ffxi/Stun_(Status)), and [Amnesia](https://www.bg-wiki.com/ffxi/Amnesia) can prevent a player from doing most things.
 2. [Paralyze](https://www.bg-wiki.com/ffxi/Paralyze_(Status)) can waste job abilities and interrupt many other actions.
 3. [Silence](https://www.bg-wiki.com/ffxi/Silence_(Status)), [Bind](https://www.bg-wiki.com/ffxi/Bind_(Status)), and [Gravity](https://www.bg-wiki.com/ffxi/Gravity) make it harder for your party to attack new targets or react to threats.
 4. [Disease](https://www.bg-wiki.com/ffxi/Disease)/[Plague](https://www.bg-wiki.com/ffxi/Plague), [Blind](https://www.bg-wiki.com/ffxi/Blind_(Status)), [Addle](https://www.bg-wiki.com/ffxi/Addle_(Status)), and [Slow](https://www.bg-wiki.com/ffxi/Slow_(Status)) reduce your party's damage and healing output.
 5. [Poison](https://www.bg-wiki.com/ffxi/Poison_(Status)) and other damage over time effects make you have to heal more.
 
-Remember that some fights will change the priority of debuffs. For example, a monster may have a poison Area of Effect (AoE) attack that does 300 damage every 3 seconds, as well as be able to cast Paralyze on a single target. Barwatera + Barpoisonra would reduce the number of people you have to remove Poison from, and save you time and MP curing the people who got hit. In this case, preventing the Poison would be more useful than preventing the occasional Paralyze.
+Some fights will change the priority of debuffs. For example, a monster may have a poison Area of Effect (AoE) aura that does 300 damage every 3 seconds, in addition to another attack that can Paralyze a single target. Barwatera + Barpoisonra would reduce the number of people you have to remove Poison from, saving you both time and MP. In this case, preventing the Poison would be more useful than preventing the occasional Paralyze.
 
-Beyond bar-spells, use Stoneskin and Regen IV to prevent or mitigate pure damage. Try to cast these before the attack happens.
-* [Stoneskin](https://www.bg-wiki.com/ffxi/Stoneskin) requires Accession to cast on party members. While a Blue Mage or Summoner can cast Diamondhide or Earthen Ward instead, your Stoneskin will probably absorb more damage than theirs.
-* [Regen IV](https://www.bg-wiki.com/ffxi/Regen_IV) can be cast on party members by default, but it also works with Accession. You should keep Regen on your tank almost all the time. If you have a Scholar that can cast Regen V, let them do that instead. You should feel free to overwrite Regen IV from a RUN tank as soon as you have a Regen set with at least one potency improvement.
+Beyond Bar- spells, use Stoneskin and Regen IV to prevent or mitigate pure damage. Try to cast these before the attack happens.
+* [Stoneskin](https://www.bg-wiki.com/ffxi/Stoneskin) requires Accession to cast on party members. Blue Mages and Summoners can cast Diamondhide or Earthen Ward instead; they can cast those spells more often, but your Stoneskin will likely absorb more damage. Stoneskin is also one of the few ways to "heal" a player that has the ["Super Curse" debuff](https://www.bg-wiki.com/ffxi/Curse_(HP_Recovery)).
+* [Regen IV](https://www.bg-wiki.com/ffxi/Regen_IV) can be cast on party members one at a time, but it also works well with Accession. You should keep Regen on your tank almost all the time. If you have a Scholar that can cast Regen V, let them do that instead. You should feel free to overwrite Regen IV from a RUN tank as soon as you have a Regen set with at least one potency improvement.
 * The primary advantage of these spells is they give you a temporary reprieve from healing so you can focus on incoming debuffs or other, bigger problems. However, these spells also save you MP.
 
 
@@ -184,31 +194,33 @@ Beyond bar-spells, use Stoneskin and Regen IV to prevent or mitigate pure damage
 White Mages have many useful buffs, both for yourself and others. This list is in rough order of priority.
 
 1. Keep Reraise on yourself at all times.
-    * This includes right after you get up and are still Weakened.
-    * You may want to cast Haste on yourself first, if you think you may die again soon, to reduce the recast.
+	* This includes right after you get up from KO and are still Weakened.
+	* You may want to cast Haste on yourself first, if you think you may die again soon, to reduce the recast timer.
 2. Keep Aurorastorm on yourself at all times for +15% heal potency.
-	* This starts to matter less at absurd levels of Cure Potency II, but 15% is still 15%.
-	* Ask other players if they want -storm spells before giving them out automatically.
+	* This starts to matter less when you have absurd levels of Cure Potency II, but 15% is still 15%.
+	* Ask other players if they want -storm spells before casting them automatically.
 3. As mentioned before, keep Afflatus Solace active unless you have a reason to use Afflatus Misery.
-4. Keep Haste and Aquaveil on yourself to reduce your spell recast timers and interruption chance.
+4. Keep both Haste and Aquaveil on yourself to reduce your spell recast timers and spell interruption chance.
 	* Consider using Accession + Aquaveil if you have lots of casters in your party, even if it's just five melee jobs all with /NIN.
 	* Haste doesn't work with Accession, unfortunately. Get a BRD or GEO to help.
 5. Maintain Protectra V and Shellra V on your party at all times.
-    * Paladins' Shield Barrier trait means they can cast a better Protect. Let them do it.
-    * Recast these as soon as possible on people you Raise.
-6. Maintain Boost-STR for most groups.
+	* Paladins' Shield Barrier trait means they can cast a better Protect. Let them do it.
+	* Recast these as soon as possible on people you Raise.
+6. Maintain appropriate Bar-element and Bar-status spells for the current fight.
+7. Maintain Boost-STR for most groups.
 	* Use Boost-DEX if your group is missing lots of attacks, or if your group's biggest damage dealers are THF, DNC, NIN, and BLU.
-	* Use Boost-AGI if your group has a majority of RNG and COR.
+	* Use Boost-AGI if your group's biggest damage dealers are RNG and COR.
 	* Use Boost-INT if your group has a majority of BLM, GEO, RDM, and SCH.
-	* Use Boost-MND if it's just you, or if you desperately need to avoid Silence/Slow/Paralyze resists.
-	* Boost-VIT and CHR are only useful for feeding junk buffs to monsters that absorb them.
-7. Maintain Auspice for most groups.
+	* Use Boost-MND if you are away from the rest of your group, or if you desperately need to avoid Silence/Slow/Paralyze resists.
+	* Boost-CHR is useful when feeding junk buffs to monsters that absorb buffs.
+	* Boost-VIT is generally useless.
+8. Maintain Auspice for most groups.
 	* Auspice adds 10-25 Subtle Blow (cap 50) to everyone nearby.
 	* Most damage dealers do not have much Subtle Blow in their TP sets, so monsters gain TP very rapidly from being hit.
 	* Auspice will overwrite most RDM En-spells, but will not overwrite Enlight (PLD) or Endark (DRK).
-8. Maintain Sublimation on yourself.
-	* Remember that it's useless while Weakened, and stops charging when you take significant damage.
+9. Maintain Sublimation on yourself.
 	* Sublimation gets less essential as your gear gets better. But even with +6 Refresh or more in your idle set, it is useful both as backup MP and for negating Sleep/Lullaby.
+	* Sublimation is useless while Weakened, and stops charging when you take significant damage.
 	* It will not stack with Refresh or Refresh II, will be overwritten by Refresh III, and stacks with Ballads. Make friends with your BRD!
 
 ### Merits and Job Points
@@ -221,7 +233,7 @@ Initially, you should invest WHM merit points as follows:
 5	Afflatus Solace
 ```
 
-As your Precast set reaches 40-80 Fast Cast, move points from Cure Cast Time to Regen Effect so that your merits are instead:
+As your Precast set (see the next section) reaches 40-80 Fast Cast, move points from Cure Cast Time to Regen Effect so that your merits are instead:
 ```
 0	Cure Cast Time
 5	Regen Effect
@@ -239,22 +251,23 @@ As you gain job points, spend them in this order:
 
 ## Gear
 
-This guide focuses mostly on beginning gear, with notes on a few key pieces and job-specific equipment (JSE) that you want to upgrade. For complete gear recommendations and sets, see [the FFXIAH WHM guide, v3](https://ffxiah.com/forum/topic/55005/on-healing-hands-a-comprehensive-whm-guide-v3/).
+This guide focuses mostly on beginning gear, with notes on a few key pieces and job-specific equipment (JSE) that you should upgrade. For complete gear recommendations and sets, see [the FFXIAH WHM guide, v3](https://ffxiah.com/forum/topic/55005/on-healing-hands-a-comprehensive-whm-guide-v3/).
 
 ### Basic Sets and Their Priorities
 
-Your immediate goal is to start building three basic sets, and aim for some minimum stats with each one:
+Your immediate goal is to start building three basic sets, and reach some minimum stat values with each one:
 
 1. Precast (30 Fast Cast)
 	* This set should be automatically equipped before you cast spells. Other sets are also referred to as "midcast" sets.
-	* For now, you'll also use this set for -na spells and Raises to minimize their recast times.
+	* For now, you'll also use this set for -na spells and Raise spells to minimize their recast times.
 2. Healing (30 Cure Potency)
-	* Your biggest goal is to get 30 Cure Potency.
-	* Equip items with -Enmity or Conserve MP in other slots
-3. Idle (-20 Damage Taken, 2 Refresh)
+	* Your biggest goal is to get 30 Cure Potency by any combination of gear possible.
+	* Equip items with -Enmity or Conserve MP in other slots.
+3. Idle (-20 Damage Taken, +2 Refresh)
 	* Yes, you want a [Defending Ring](https://www.bg-wiki.com/ffxi/Defending_Ring) eventually, just like every other job.
-	* Equip items with high DEF or Magic Evasion in other slots.
 	* Consider purchasing a pair of [Herald's Gaiters](https://www.bg-wiki.com/ffxi/Herald%27s_Gaiters) for idle movement speed. Running away is great for avoiding damage!
+	* Your GearSwap lua file should automatically equip this set after finishing any other action.
+	* Equip items with high DEF or Magic Evasion in other slots.
 
 When you have at least those three sets ready, start building a few more:
 
@@ -266,39 +279,40 @@ When you have at least those three sets ready, start building a few more:
 	* Equip items with Healing Magic skill and Haste/Fast Cast in slots that do not have "Cursna +XX" potency.
 6. Enfeebling
 	* MND, Magic Accuracy, and Enfeebling Skill items are all helpful.
-	* Fill in the gaps with Conserve MP, Haste, and Fast Cast.
+	* Equip items with Conserve MP, Haste, and Fast Cast in other slots.
 
 
 ### Long-Term Set Goals
 
 At this point, you are making your existing sets better, or making very specific sets for more niche purposes. Note that many of these sets have Conserve MP as a preferred stat. You don't need to build a Conserve MP set specifically, but filling gaps in each set with Conserve MP will make you much more self-sufficient.
 
-**Idle Set**: -50 Damage Taken -> Refresh
-<br />You will eventually want three idle sets: maximum refresh, maximum DT, and maximum magic evasion.
+**Idle Set**: -50% Damage Taken (DT) -> Refresh -> Magic Evasion
+<br />You will eventually want three different idle sets that individually maximize refresh, -Damage Taken, or magic evasion.
 
 **Precast Set**: 80 Fast Cast (hard cap)
-* SCH subjob with Light Arts active gives you 10 Fast Cast for healing spells.
-* RDM subjob has 15 Fast Cast.
+* You only need ~70 with a /SCH subjob, or ~65 for a /RDM subjob.
+* Do not include Quick Magic ("Occ. Quickens Spellcasting") gear in this set.
+* Gear in this set can be useful for reducing recast timers, when included in other sets.
 
 **Quick Set**: 10 Quick Magic -> Conserve MP -> Haste/Fast Cast
-* Use this set for casting Raise/Reraise, Arise, teleport spells, and all -na spells (except for Cursna).
-* If you use this for Erase, make sure your set includes the WHM necklace with Erase +1.
+* Use this set for casting Raise/Reraise/Arise, teleport spells, and all -na spells (except for Cursna).
+* If you use this for Erase, make sure your set includes a [Cleric's Torque](https://www.bg-wiki.com/ffxi/Cleric's_Torque).
 
 **Healing Set**
-<br />You should eventually have separate sets for Cure and Cura/Curaga spells, because they do not benefit from Afflatus Solace. The stat priorities for healing are, in this order:
-  1. Cure Potency II 30 (hard cap, but you won't reach this)
-  2. Afflatus Solace potency (as much as you can get)
-  3. Cure Potency 50 (hard cap)
-  4. -50 Enmity (hard cap)
-  5. Conserve MP
-  6. (1 healing skill == 2 MND == 5 VIT) for additional healing output
+<br />You should eventually have separate sets for Cura/Curaga spells, because they do not benefit from Afflatus Solace. The stat priorities are, in this order:
+1. 30 Cure Potency II (hard cap)
+2. Afflatus Solace potency (as much as you can get; not for Curaga)
+3. 50 Cure Potency (hard cap)
+4. -50 Enmity (hard cap)
+5. Conserve MP
+6. (1 healing skill == 2 MND == 4 VIT) for additional Cure healing, or (5 healing skill == 1 MND == 3 VIT) for Curaga
 
-Initially, you will not have many options for Cure Potency II or Afflatus Solace, and it'll be a struggle to get 50 Cure Potency. Eventually you'll get more gear options to mix and match.
+Initially, you will not have many options for Cure Potency II or Afflatus Solace potency, and it'll be a struggle to even get 50 Cure Potency. You will have more gear options to mix and match eventually.
 
 **Cursna Set**: Cursna +xx -> Healing Magic skill -> (Haste/Fast Cast) -> Conserve MP
 <br />When starting out, you should expect to cast Cursna 3-4 times per Doom. See [Chiaia's wonderful Cursna calculator](http://chiaia.optic-ice.com/Cursna.html) for more information on how these stats translate to % success rate.
 
-**Enhancing Set**: Duration -> Conserve MP
+**Enhancing Set**: Enhancing Magic Duration -> Conserve MP
 <br />You should eventually use separate sets for Regen, Bar- spells, and Enhancing Skill (Boost- spells), each of which have equipment that boosts their potencies. However, all of those sets can use this set as their base.
 
 **Enfeebling**: (MND/Magic Accuracy/Enfeebling Magic skill) -> Conserve MP
@@ -366,7 +380,7 @@ If you're just starting out:
 * Pair the staff with a [Korin Obi](https://www.bg-wiki.com/ffxi/Korin_Obi) or [Hachirin-no-Obi](https://www.bg-wiki.com/ffxi/Hachirin-no-Obi) in your healing set, and you're all set to use Aurorastorm for +15% healing.
 * [Homiliary](https://www.bg-wiki.com/ffxi/Homiliary) comes from an easy Adoulin quest and offers +1 Refresh for your idle set.
 * [Glorious Earring](https://www.bg-wiki.com/ffxi/Glorious_Earring) is also easily questable, gives Cure Potency II, and is best in slot eventually.
-* The [Telchine set](https://www.bg-wiki.com/ffxi/Category:Alluvion_Skirmish_Armor#Telchine_Armor_Set) can be augmented with up to (combined) +50% Enhancing Duration and 25 Conserve MP.
+* The [Telchine set](https://www.bg-wiki.com/ffxi/Category:Alluvion_Skirmish_Armor#Telchine_Armor_Set) can be augmented with up to (combined) +50% Enhancing Duration and +25 Conserve MP.
 * [Sanctity Necklace](https://www.bg-wiki.com/ffxi/Sanctity_Necklace) is available for one day's worth of Domain Incursion points and can help fill gaps in multiple sets.
 
 Medium effort, big reward:
@@ -382,14 +396,14 @@ Medium effort, big reward:
 
 I recommend at [making least two Ambuscade capes](https://www.bg-wiki.com/ffxi/Category:JSE_Capes#Ambuscade_Capes). You will have to give up a major source of either Fast Cast or Cure Potency if you only make one. 
 
-Cape 1, Idle & Precast sets
+**Cape 1: Idle and Precast sets**
 * Thread: HP +60
 * Dust: Evasion +20/Magic Evasion +20
 * Sap: Fast Cast +10%
 * Resin: Damage Taken -5%
 * Dye: Magic Evasion +10
 
-Cape 2, Healing & Enfeebling sets
+**Cape 2: Healing, Cursna, and Enfeebling sets**
 * Thread: MND +20
 * Dust: Magic Accuracy +20/Magic Damage +20
 * Sap: "Cure" Potency +10%
