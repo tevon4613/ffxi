@@ -23,31 +23,31 @@ You should have also already:
 
 Install, enable, and configure the following addons:
 * [Battlemod](https://docs.windower.net/addons/battlemod/)
-    Battlemod is required so you can be more likely to notice incoming Bad Stuff.
-    See a [sample configuration](config/battlemod.xml).
+<br/>Battlemod is required so you can be more likely to notice incoming Bad Stuff.
+<br/>See a [sample configuration](config/battlemod.xml).
 * [DressUp](https://docs.windower.net/addons/dressup/)
-    DressUp is required to prevent losing your target when trying to cast on other players.
-    You should set your GearSwap lua to activate DressUp automatically when you switch to WHM:
-    `send_command('@input //dressup blinking all always on')`
+<br/>DressUp is required to prevent losing your target when trying to cast on other players.
+<br/>You should set your GearSwap lua to activate DressUp automatically when you switch to WHM:
+<br/>`send_command('@input //dressup blinking all always on')`
 * [GearSwap](https://docs.windower.net/addons/gearswap/)
-    GearSwap is required for automatically equipping appropriate gear in various situations.
-    Feel free to use any lua file that works for you, as long as it supports all the sets mentioned in this guide.
+<br/>GearSwap is required for automatically equipping appropriate gear in various situations.
+<br/>Feel free to use any lua file that works for you, as long as it supports all the sets mentioned in this guide.
 * [Shortcuts](https://docs.windower.net/addons/shortcuts/)
-    Shortcuts is optional, but strongly recommended, as a way to cast spells quickly.
-    See this [sample configuration](config/aliases.xml) for some ideas.
+<br/>Shortcuts is optional, but strongly recommended, as a way to cast spells quickly.
+<br/>See this [sample configuration](config/aliases.xml) for some ideas.
 * [Timers](https://docs.windower.net/plugins/timers/)
-    Technically a plugin, rather than an addon.
-    Timers is optional, but strongly recommended, for awareness on party buffs that will expire soon as well as your own recast timers.
-    You may want to [customize the default timers](config/timers.xml) shown to remove several common buffs.
+<br/>Technically a plugin, rather than an addon.
+<br/>Timers is optional, but strongly recommended, for awareness on party buffs that will expire soon as well as your own recast timers.
+<br/>You may want to [customize the default timers](config/timers.xml) shown to remove several common buffs.
 * [XIVParty](https://github.com/Tylas11/XivParty)
-	Not an official addon, but it is worth manually downloading and installing.
-    XIVParty is required for effective triage, and shows your party's buffs and debuffs at a glance.
-    You should customize the settings to reduce the visual noise: it shows all possible buffs by default.
-    See this [sample configuration](config/xivparty-settings.xml) for a recommended setup.
+<br/>Not an official addon, but it is worth manually downloading and installing.
+<br/>XIVParty is required for effective triage, and shows your party's buffs and debuffs at a glance.
+<br/>You should customize the settings to reduce the visual noise: it shows all possible buffs by default.
+<br/>See this [sample configuration](config/xivparty-settings.xml) for a recommended setup.
 
 Separate your chat log into two windows:
-  * The left window MUST be battle content (in order for Battlemod to work), such as damage taken, spells cast, etc.
-  * The right window MUST NOT have battle content, and SHOULD be mostly party/linkshell chat.
+* The left window MUST be battle content (in order for Battlemod to work), such as damage taken, spells cast, etc.
+* The right window MUST NOT have battle content, and SHOULD be mostly party/linkshell chat.
 
 
 ## The Very Basics
