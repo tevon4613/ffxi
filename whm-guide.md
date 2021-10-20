@@ -77,7 +77,7 @@ A RDM subjob can also be useful:
 There are five WHM job abilities you should care about:
 
 * [Afflatus Solace](https://www.bg-wiki.com/ffxi/Afflatus_Solace) should be your default option. Make sure it's active before you start fights.
-* [Afflatus Misery](https://www.bg-wiki.com/ffxi/Afflatus_Misery) is mostly useful until if and when you get a Yagrush. While Misery is active, you can use Esuna to remove debuffs from your entire group if you also have the same debuff. You should switch to Misery just before fighting RDM and BLU monsters in Dynamis, because these monsters tend to debuff your entire party rapidly. But when you're done fighting those monsters, switch back to Solace.
+* [Afflatus Misery](https://www.bg-wiki.com/ffxi/Afflatus_Misery) is mostly useful until if and when you get a Yagrush. While Misery is active, you can use Esuna to remove debuffs from your entire group if you also have the same debuff. This is especially useful for Amnesia. You should switch to Misery just before fighting RDM and BLU monsters in Dynamis, because these monsters tend to debuff your entire party rapidly. But when you're done fighting those monsters, switch back to Solace.
 * [Devotion](https://www.bg-wiki.com/ffxi/Devotion) helps your tanks (and less often, other mage jobs) avoid downtime by restoring their MP. Remember to heal yourself after, though.
 * [Sacrosanctity](https://www.bg-wiki.com/ffxi/Sacrosanctity) helps prevent deaths from monsters' Mijin Gakure, Astral Flow, and other major damage abilities.
 * Use [Asylum](https://www.bg-wiki.com/ffxi/Asylum) for bosses that have nasty debuffs. It only lasts 30 seconds, though.
