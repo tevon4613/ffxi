@@ -85,8 +85,8 @@ There are five WHM job abilities you should care about:
 And three WHM job abilities that are still useful, but less so:
 
 * [Divine Seal](https://www.bg-wiki.com/ffxi/Divine_Seal) can double a heal or (like Accession) turn a status removal spell into an area effect. However, being able to heal big numbers is rarely an issue after you get 40-50 cure potency, and Accession is almost always available.
-* [Divine Caress](https://www.bg-wiki.com/ffxi/Divine_Caress) can theoretically prevent a monster from reapplying a debuff after you remove it. In practice, most boss monsters have high enough magic accuracy that they reapply it anyway.
-* Save [Benediction](https://www.bg-wiki.com/ffxi/Benediction) for when you are out of MP.
+* [Divine Caress](https://www.bg-wiki.com/ffxi/Divine_Caress) can prevent a monster from reapplying a debuff after you remove it. In practice, most boss monsters have high enough magic accuracy that they reapply it anyway. Consider using it for nastier debuffs, like Petrification.
+* Save [Benediction](https://www.bg-wiki.com/ffxi/Benediction) for when you are out of MP, or when everyone has a lot of debuffs that need immediate removal.
 
 
 ## Responsible & Ethical Healing Practices
