@@ -212,7 +212,7 @@ Initially, you should invest WHM merit points as follows:
 5	Cure Cast Time
 5	Bar Spell Effect
 5	Devotion
-5	Animus Solace
+5	Afflatus Solace
 ```
 
 As your Precast set reaches 40-80 Fast Cast, move points from Cure Cast Time to Regen Effect so that your merits are instead:
