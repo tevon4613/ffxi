@@ -96,6 +96,7 @@ The first rule for WHM is to pay attention. If you cannot:
 * Focus on your party's health bars, rather than damage dealing
 * Maintain basic situational awareness from monster animations and the chat log
 * Triage and make educated decisions about what to do next, from moment to moment
+
 ... then you should play a different job. A healer trust is better than a real player who can't do these things.
 
 That said, you can't always heal through everything, and there will often be times you have to choose between bad and worse outcomes. Your party members will get one-shot, go AFK without warning, forget to buff you, and stand in the Firaga V. You yourself will press the wrong macro key, heal the wrong person, get one-shot, and stand in the Firaga V. Your job is to do your best to keep everyone alive despite inevitable mistakes.
@@ -144,14 +145,14 @@ So, before your next fight:
 
 | Preventable Debuffs               | Barspells to use             |
 |-----------------------------------|------------------------------|
-| Addle, Amnesia, Disease/Plague	| Barfira + Baramnesra/Barvira |
-| Bind, Paralyze					| Barblizzara + Barparalyzra   |
-| Gravity, Silence					| Baraera + Barsilencera       |
-| Petrify, Slow						| Barstonra + Barpetra         |
-| Stun								| Barthundra                   |
-| Poison							| Barwatera + Barpoisonra      |
-| Lullaby							| Barsleepra                   |
-| Blind, Sleep						| Barblindra/Barsleepra        |
+| Addle, Amnesia, Disease/Plague    | Barfira + Baramnesra/Barvira |
+| Bind, Paralyze		    | Barblizzara + Barparalyzra   |
+| Gravity, Silence		    | Baraera + Barsilencera       |
+| Petrify, Slow	   		    | Barstonra + Barpetra         |
+| Stun				    | Barthundra                   |
+| Poison			    | Barwatera + Barpoisonra      |
+| Lullaby			    | Barsleepra                   |
+| Blind, Sleep			    | Barblindra/Barsleepra        |
 
 This should only take a minute or two at the most. You don't have to memorize all the monster's mechanics (or this debuff list), but you should strongly consider making a bookmark, post-it on your monitor, or similar note for yourself. If you have a second monitor, move Netflix off to the side and keep a browser window handy as your cheat sheet.
 
