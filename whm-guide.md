@@ -9,7 +9,6 @@ This guide explains how to gear up and play a White Mage to acceptable levels wi
 
 You should know and understand the following concepts:
 
-* `WHM`, `RDM`, and `SCH` are job abbreviations for White Mage, Red Mage, and Scholar
 * `buff` and `debuff` are positive (Enhancing Magic) and negative (Enfeebling Magic) status effects
 * `cureskin` is the temporary stoneskin effect applied when you heal with Afflatus Solace active
 * `-na spells` remove debuffs; they include Cursna, Stona, Erase, and Esuna among others
@@ -77,7 +76,7 @@ A RDM subjob can also be useful:
 There are five WHM job abilities you should care about:
 
 * [Afflatus Solace](https://www.bg-wiki.com/ffxi/Afflatus_Solace) should be your default option. Make sure it's active before you start fights.
-* [Afflatus Misery](https://www.bg-wiki.com/ffxi/Afflatus_Misery) is mostly useful until if and when you get a Yagrush. While Misery is active, you can use Esuna to remove debuffs from your entire group if you also have the same debuff. This is especially useful for Amnesia. You should switch to Misery just before fighting RDM and BLU monsters in Dynamis, because these monsters tend to debuff your entire party rapidly. But when you're done fighting those monsters, switch back to Solace.
+* [Afflatus Misery](https://www.bg-wiki.com/ffxi/Afflatus_Misery) is mostly useful until if and when you get a Yagrush. While Misery is active, you can use Esuna to remove debuffs from your entire group if you also have the same debuff. This is especially useful for Amnesia, as well as fights where a monster uses multiple debuffs at the same time. For example, you should switch to Misery just before fighting RDM and BLU monsters in Dynamis, because these monsters tend to debuff your entire party rapidly. But when you're done fighting those monsters, switch back to Solace.
 * [Devotion](https://www.bg-wiki.com/ffxi/Devotion) helps your tanks (and less often, other mage jobs) avoid downtime by restoring their MP. Remember to heal yourself after, though.
 * [Sacrosanctity](https://www.bg-wiki.com/ffxi/Sacrosanctity) helps prevent deaths from monsters' Mijin Gakure, Astral Flow, and other major damage abilities.
 * Use [Asylum](https://www.bg-wiki.com/ffxi/Asylum) for bosses that have nasty debuffs. It only lasts 30 seconds, though.
@@ -306,7 +305,7 @@ Most parties will not be structured to give you damage-dealing buffs. Still, you
 * Consider a separate set with Magic Burst damage.
 
 **TP Set**: Accuracy -> Double/Triple/Quad Attack -> Store TP -> DEX
-* When in doubt, aim for 1200 accuracy without food buffs. Use /checkparam to see your current accuracy.
+* When in doubt, aim for 1200 accuracy without food buffs. Use `/checkparam` to see your current accuracy.
 * Consider separate sets for content that requires high, medium, and low accuracy.
 
 **Weaponskill Sets**: Attack -> Weapon Skill Damage -> (varies)
