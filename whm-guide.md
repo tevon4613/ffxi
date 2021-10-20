@@ -314,7 +314,7 @@ Most parties will not be structured to give you damage-dealing buffs. Still, you
 * Mystic Boon is excellent for restoring MP but involves more than other quests.
 
 
-## The JSE Gear Journey
+### The JSE Gear Journey
 
 Collect ilvl 109 versions of your Artifact (Theophany), [Relic (Piety)](https://www.bg-wiki.com/ffxi/Piety_Attire_Set), and [Empyrean (Ebers)](https://www.bg-wiki.com/ffxi/Ebers_Attire_Set) gear in this order:
 
