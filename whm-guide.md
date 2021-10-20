@@ -272,7 +272,7 @@ At this point, you are making your existing sets better, or making very specific
 * SCH subjob with Light Arts active gives you 10 Fast Cast for healing spells.
 * RDM subjob has 15 Fast Cast.
 
-**Quick Set: 10 Quick Magic -> Conserve MP -> Haste/Fast Cast**
+**Quick Set**: 10 Quick Magic -> Conserve MP -> Haste/Fast Cast
 * Use this set for casting Raise/Reraise, Arise, teleport spells, and all -na spells (except for Cursna).
 * If you use this for Erase, make sure your set includes the WHM necklace with Erase +1.
 
