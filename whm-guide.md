@@ -1,4 +1,4 @@
-# Temas' Guide to Being an Effective WHM
+# Towards Effectiveness: A WHM Guide
 
 > _tri·age (n): the sorting of and allocation of treatment to patients and especially battle and disaster victims according to a system of priorities designed to maximize the number of survivors_
 
@@ -81,7 +81,7 @@ A RDM subjob can also be useful:
 
 There are five WHM job abilities you should care about:
 
-* [Afflatus Solace](https://www.bg-wiki.com/ffxi/Afflatus_Solace) should be your default option. Make sure it's active before you start fights.
+* [Afflatus Solace](https://www.bg-wiki.com/ffxi/Afflatus_Solace) should be your default option. Make sure it's active before you start fights. This job ability applies cureskin when you use a Cure spell, and this is your primary tool for mitigating damage. Cureskin will not occur if your target is already at full health.
 * [Afflatus Misery](https://www.bg-wiki.com/ffxi/Afflatus_Misery) is mostly useful until if and when you get a Yagrush. While Misery is active, you can use Esuna to remove debuffs from your entire group if you also have the same debuff. This is especially useful for Amnesia, as well as fights where a monster uses multiple debuffs at the same time. For example, you should switch to Misery just before fighting RDM and BLU monsters in Dynamis, because these monsters tend to debuff your entire party rapidly. But when you're done fighting those monsters, switch back to Solace.
 * [Devotion](https://www.bg-wiki.com/ffxi/Devotion) helps your tanks (and less often, other mage jobs) avoid downtime by restoring their MP. Remember to heal yourself after you use it, though.
 * [Sacrosanctity](https://www.bg-wiki.com/ffxi/Sacrosanctity) helps prevent deaths from monsters' Mijin Gakure, Astral Flow, and other major damage abilities.
@@ -91,7 +91,7 @@ And three WHM job abilities that are still useful, but less so:
 
 * [Divine Seal](https://www.bg-wiki.com/ffxi/Divine_Seal) can double a heal or (like Accession) turn a status removal spell into an area effect. However, being able to heal big numbers is rarely an issue after you get 40-50 cure potency, and Accession is almost always available.
 * [Divine Caress](https://www.bg-wiki.com/ffxi/Divine_Caress) can prevent a monster from reapplying a debuff after you remove it. In practice, most boss monsters have high enough magic accuracy that they reapply it anyway. Consider using it for nastier debuffs, like Petrification.
-* Save [Benediction](https://www.bg-wiki.com/ffxi/Benediction) for when you are out of MP, or when everyone has a lot of debuffs that need immediate removal.
+* Save [Benediction](https://www.bg-wiki.com/ffxi/Benediction) for when you are completely out of MP, or when your party has a lot of debuffs that need _immediate_ removal.
 
 
 ## Responsible & Ethical Healing Practices
@@ -248,6 +248,7 @@ As you gain job points, spend them in this order:
 6. Sacrosanctity Effect
 7. (all others)
 
+From your Job Point gifts, Reraise IV is excellent. Full Cure can be very useful, but it requires you to have Refresh, Ballad, or Sublimation available to restore your MP afterward.
 
 ## Gear
 
@@ -389,7 +390,7 @@ Medium effort, big reward:
 * [Kaja Rod](https://www.bg-wiki.com/ffxi/Kaja_Rod) offers a lot of enfeebling and nuking stats. The Black Halo damage is nice, too.
 * [Embla Sash](https://www.bg-wiki.com/ffxi/Embla_Sash) is 1000 Domain Incursion points, but it's best-in-slot for your Enhancing set and the other stats are useful too.
 * [Lengo Pants](https://www.bg-wiki.com/ffxi/Lengo_Pants), [Fanatic Gloves](https://www.bg-wiki.com/ffxi/Fanatic_Gloves), and [Serenity](https://www.bg-wiki.com/ffxi/Serenity) are all useful pieces from Sinister Reign, with and without augments.
-* [Cleric's Torque](https://www.bg-wiki.com/ffxi/Cleric's_Torque) lets you Erase two debuffs at once. The high-quality versions are nice, but entirely optional.
+* [Cleric's Torque](https://www.bg-wiki.com/ffxi/Cleric's_Torque) lets you Erase two debuffs at once. The high-quality versions have nice augments, but are entirely optional.
 
 
 ### Ambuscade Capes
