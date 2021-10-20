@@ -1,0 +1,323 @@
+<?xml version="1.1" ?>
+<!--
+  To install this, copy it to this folder inside your Windower folder:
+  ..\Windower4\addons\shortcuts\data\aliases.xml
+
+  To reload the shortcuts addon, type this command in game (including slashes):
+  //lua r shortcuts
+-->
+<settings>
+	<global>
+		<!-- WHM JAs -->
+		<bene>Benediction</bene>
+		<dc>Divine Caress</dc>
+		<devo>Devotion</devo>
+		<ds>Divine Seal</ds>
+		<mis>Afflatus Misery</mis>
+		<sol>Afflatus Solace</sol>
+		<sac>Sacrifice</sac>
+		<!-- SCH JAs -->
+		<acc>Accession</acc>
+		<adb>Addendum: Black</adb>
+		<adw>Addendum: White</adw>
+		<al>Alacrity</al>
+		<alt>Altruism</alt>
+		<cel>Celerity</cel>
+		<da>Dark Arts</da>
+		<ebu>Ebullience</ebu>
+		<foc>Focalization</foc>
+		<imm>Immanence</imm>
+		<la>Light Arts</la>
+		<man>Manifestation</man>
+		<pars>Parsimony</pars>
+		<pen>Penury</pen>
+		<perp>Perpetuance</perp>
+		<rap>Rapture</rap>
+		<sub>Sublimation</sub>
+		<!-- RDM JAs -->
+		<cs>Chainspell</cs>
+		<cmp>Composure</cmp>
+		<cv>Convert</cv>
+		<sab>Saboteur</sab>
+		<sty>Stymie</sty>
+		<!-- BLM JAs -->
+		<es>Elemental Seal</es>
+		<!-- BLU JAs -->
+		<bur>Burst Affinity</bur>
+		<ca>Chain Affinity</ca>
+		<diff>Diffusion</diff>
+		<eff>Efflux</eff>
+		<ul>Unbridled Learning</ul>
+
+		<!-- WHM Spells -->
+		<altep>Teleport-Altep</altep>
+		<aq>Aquaveil</aq>
+		<aus>Auspice</aus>
+		<ba>Baraera</ba>
+		<ba1>Banish</ba1>
+		<ba2>Banish II</ba2>
+		<ba3>Banish III</ba3>
+		<bag>Banishga</bag>
+		<bag1>Banishga</bag1>
+		<bag2>Banishga II</bag2>
+		<bagi>Boost-AGI</bagi>
+		<bam>Baramnesra</bam>
+		<bb>Barblizzara</bb>
+		<bbl>Barblindra</bbl>
+		<bchr>Boost-CHR</bchr>
+		<bdex>Boost-DEX</bdex>
+		<bf>Barfira</bf>
+		<bint>Boost-INT</bint>
+		<bmnd>Boost-MND</bmnd>
+		<bna>Blindna</bna>
+		<bpa>Barparalyzra</bpa>
+		<bpo>Barpoisonra</bpo>
+		<bpe>Barpetra</bpe>
+		<bpt>Barpetra</bpt>
+		<bsi>Barsilencera</bsi>
+		<bsl>Barsleepra</bsl>
+		<bs>Barstonra</bs>
+		<bstr>Boost-STR</bstr>
+		<bt>Barthundra</bt>
+		<bv>Barvira</bv>
+		<bvit>Boost-VIT</bvit>
+		<bw>Barwatera</bw>
+		<c1>Cure</c1>
+		<c2>Cure II</c2>
+		<c3>Cure III</c3>
+		<c4>Cure IV</c4>
+		<c5>Cure V</c5>
+		<c6>Cure VI</c6>
+		<cg>Curaga</cg>
+		<cg1>Curaga</cg1>
+		<cg2>Curaga II</cg2>
+		<cg3>Curaga III</cg3>
+		<cg4>Curaga IV</cg4>
+		<cg5>Curaga V</cg5>
+		<cga>Curaga</cga>
+		<cga1>Curaga</cga1>
+		<cga2>Curaga II</cga2>
+		<cga3>Curaga III</cga3>
+		<cga4>Curaga IV</cga4>
+		<cga5>Curaga V</cga5>
+		<cna>Cursna</cna>
+		<dem>Teleport-Dem</dem>
+		<deo>Deodorize</deo>
+		<ena>Esuna</ena>
+		<er>Erase</er>
+		<fc>Full Cure</fc>
+		<h>Haste</h>
+		<holla>Teleport-Holla</holla>
+		<invis>Invisible</invis>
+		<jugner>Recall-Jugner</jugner>
+		<mea>Teleport-Mea</mea>
+		<meri>Recall-Meriph</meri>
+		<meriph>Recall-Meriph</meriph>
+		<para>Paralyze</para>
+		<pash>Recall-Pashh</pash>
+		<pashow>Recall-Pashh</pashow>
+		<plna>Paralyna</plna>
+		<psna>Poisona</psna>
+		<pt1>Protect</pt1>
+		<pt2>Protect II</pt2>
+		<pt3>Protect III</pt3>
+		<pt4>Protect IV</pt4>
+		<pt5>Protect V</pt5>
+		<pta1>Protectra</pta1>
+		<pta2>Protectra II</pta2>
+		<pta3>Protectra III</pta3>
+		<pta4>Protectra IV</pta4>
+		<pta5>Protectra V</pta5>
+		<r1>Raise</r1>
+		<r2>Raise II</r2>
+		<r3>Raise III</r3>
+		<r4>Arise</r4>
+		<re1>Regen</re1>
+		<re2>Regen II</re2>
+		<re3>Regen III</re3>
+		<re4>Regen IV</re4>
+		<re5>Regen V</re5>
+		<rr1>Reraise</rr1>
+		<rr2>Reraise II</rr2>
+		<rr3>Reraise III</rr3>
+		<rr4>Reraise IV</rr4>
+		<sh1>Shell</sh1>
+		<sh2>Shell II</sh2>
+		<sh3>Shell III</sh3>
+		<sh4>Shell IV</sh4>
+		<sh5>Shell V</sh5>
+		<sha1>Shellra</sha1>
+		<sha2>Shellra II</sha2>
+		<sha3>Shellra III</sha3>
+		<sha4>Shellra IV</sha4>
+		<sha5>Shellra V</sha5>
+		<sil>Silence</sil>
+		<sna>Silena</sna>
+		<snk>Sneak</snk>
+		<ss>Stoneskin</ss>
+		<vahzl>Teleport-Vahzl</vahzl>
+		<vna>Viruna</vna>
+		<yhoat>Teleport-Yhoat</yhoat>
+
+		<!-- SCH Spells -->
+		<adlo>Adloquium</adlo>
+		<ah>Anemohelix</ah>
+		<ah2>Anemohelix II</ah2>
+		<ast>Aurorastorm</ast>
+		<ast2>Aurorastorm II</ast2>
+		<aug>Animus Augeo</aug>
+		<ch>Cryohelix</ch>
+		<ch2>Cryohelix II</ch2>
+		<gh>Geohelix</gh>
+		<gh2>Geohelix II</gh2>
+		<hh>Hydrohelix</hh>
+		<hh2>Hydrohelix II</hh2>
+		<ih>Ionohelix</ih>
+		<ih2>Ionohelix II</ih2>
+		<klim>Klimaform</klim>
+		<lh>Luminohelix</lh>
+		<lh2>Luminohelix II</lh2>
+		<minu>Animus Minuo</minu>
+		<nh>Noctohelix</nh>
+		<nh2>Noctohelix II</nh2>
+		<ph>Pyrohelix</ph>
+		<ph2>Pyrohelix II</ph2>
+		<vst>Voidstorm</vst>
+		<vst2>Voidstorm II</vst2>
+
+		<!-- RDM spells -->
+		<bi>Bind</bi>
+		<bl>Blind</bl>
+		<bl2>Blind II</bl2>
+		<bk>Break</bk>
+		<dis>Dispel</dis>
+		<dit>Distract</dit>
+		<dit2>Distract II</dit2>
+		<dit3>Distract III</dit3>
+		<ena>Enaero</ena>
+		<ent>Enthunder</ent>
+		<fl>Flurry</fl>
+		<fl2>Flurry II</fl2>
+		<fr>Frazzle</fr>
+		<fr2>Frazzle II</fr2>
+		<fr3>Frazzle III</fr3>
+		<gagi>Gain-AGI</gagi>
+		<gchr>Gain-CHR</gchr>
+		<gdex>Gain-DEX</gdex>
+		<gint>Gain-INT</gint>
+		<gmnd>Gain-MND</gmnd>
+		<gstr>Gain-STR</gstr>
+		<gvit>Gain-VIT</gvit>
+		<gr>Gravity</gr>
+		<gr2>Gravity II</gr2>
+		<h2>Haste II</h2>
+		<in>Inundation</in>
+		<para2>Paralyze II</para2>
+		<ph>Phalanx</ph>
+		<ph2>Phalanx II</ph2>
+		<ps>Poison</ps>
+		<ps2>Poison II</ps2>
+		<ref>Refresh</ref>
+		<ref2>Refresh II</ref2>
+		<ref3>Refresh III</ref3>
+		<sl>Sleep</sl>
+		<sl2>Sleep II</sl2>
+		<tem>Temper</tem>
+		<tem2>Temper II</tem2>
+
+		<!-- BLM Spells -->
+		<a1>Aero</a1>
+		<a2>Aero II</a2>
+		<a3>Aero III</a3>
+		<a4>Aero IV</a4>
+		<a5>Aero V</a5>
+		<a6>Aero VI</a6>
+		<ag1>Aeroga</ag1>
+		<ag2>Aeroga II</ag2>
+		<ag3>Aeroga III</ag3>
+		<aj>Aeroja</aj>
+		<as>Aspir</as>
+		<as2>Aspir II</as2>
+		<b1>Blizzard</b1>
+		<b2>Blizzard II</b2>
+		<b3>Blizzard III</b3>
+		<b4>Blizzard IV</b4>
+		<b5>Blizzard V</b5>
+		<b6>Blizzard VI</b6>
+		<bg1>Blizzaga</bg1>
+		<bg2>Blizzaga II</bg2>
+		<bg3>Blizzaga III</bg3>
+		<bj>Blizzaja</bj>
+		<bkg>Breakga</bkg>
+		<dr>Drain</dr>
+		<dr2>Drain II</dr2>
+		<dr3>Drain III</dr3>
+		<f1>Fire</f1>
+		<f2>Fire II</f2>
+		<f3>Fire III</f3>
+		<f4>Fire IV</f4>
+		<f5>Fire V</f5>
+		<f6>Fire VI</f6>
+		<fg1>Firaga</fg1>
+		<fg2>Firaga II</fg2>
+		<fg3>Firaga III</fg3>
+		<fj>Firaja</fj>
+		<s1>Stone</s1>
+		<s2>Stone II</s2>
+		<s3>Stone III</s3>
+		<s4>Stone IV</s4>
+		<s5>Stone V</s5>
+		<s6>Stone VI</s6>
+		<sg1>Stonega</sg1>
+		<sg2>Stonega II</sg2>
+		<sg3>Stonega III</sg3>
+		<sj>Stoneja</sj>
+		<slg>Sleepga</slg>
+		<slg2>Sleepga II</slg2>
+		<t1>Thunder</t1>
+		<t2>Thunder II</t2>
+		<t3>Thunder III</t3>
+		<t4>Thunder IV</t4>
+		<t5>Thunder V</t5>
+		<t6>Thunder VI</t6>
+		<tg1>Thundaga</tg1>
+		<tg2>Thundaga II</tg2>
+		<tg3>Thundaga III</tg3>
+		<tj>Thundaja</tj>
+		<w1>Water</w1>
+		<w2>Water II</w2>
+		<w3>Water III</w3>
+		<w4>Water IV</w4>
+		<w5>Water V</w5>
+		<w6>Water VI</w6>
+		<wg1>Waterga</wg1>
+		<wg2>Waterga II</wg2>
+		<wg3>Waterga III</wg3>
+		<wj>Waterja</wj>
+
+		<!-- NIN -->
+		<ichi>Utsusemi: Ichi</ichi>
+		<u1>Utsusemi: Ichi</u1>
+		<u2>Utsusemi: Ni</u2>
+		<ni>Utsusemi: Ni</ni>
+		<!-- BRD -->
+		<ap>Army&apos;s Paeon</ap>
+		<echr>Bewitching Etude</echr>
+		<cmaz>Chocobo Mazurka</cmaz>
+		<dca>Dark Carol</dca>
+		<eagi>Swift Etude</eagi>
+		<edex>Uncanny Etude</edex>
+		<eint>Sage Etude</eint>
+		<emnd>Logical Etude</emnd>
+		<estr>Herculean Etude</estr>
+		<evit>Vital Etude</evit>
+		<fc>Fire Carol</fc>
+		<!-- DNC -->
+		<cw1>Curing Waltz</cw1>
+		<cw2>Curing Waltz II</cw2>
+		<cw3>Curing Waltz III</cw3>
+		<cw4>Curing Waltz IV</cw4>
+		<cw5>Curing Waltz V</cw5>
+		<hw>Healing Waltz</hw>
+	</global>
+</settings>
