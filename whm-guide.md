@@ -63,7 +63,7 @@ You should have the following consumables on you at all times:
 * 1x [Vile Elixir +1](https://www.bg-wiki.com/ffxi/Vile_Elixir_+1), for emergencies
 * 1x [Reraiser](https://www.bg-wiki.com/ffxi/Reraiser), for when the sixth Odin appears during a Dynamis Wave 3 boss
 
-Food is usually optional, but there are a few notable options:
+Food buffs are mostly optional, but they can be useful:
 
 * [Rolanberry Daifuku](https://www.bg-wiki.com/ffxi/Rolan._Daifuku) has 50 Magic Accuracy, and can be purchased for 5000g from any [Curio Vendor Moogle](https://www.bg-wiki.com/ffxi/Curio_Vendor_Moogle). The high-quality version is not generally worth making or buying.
 * [Tropical Crepe](https://www.bg-wiki.com/ffxi/Tropical_Crepe) has 90 Magic Accuracy, but must be crafted by a Culinarian.
