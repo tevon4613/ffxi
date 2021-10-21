@@ -63,6 +63,12 @@ You should have the following consumables on you at all times:
 * 1x [Vile Elixir +1](https://www.bg-wiki.com/ffxi/Vile_Elixir_+1), for emergencies
 * 1x [Reraiser](https://www.bg-wiki.com/ffxi/Reraiser), for when the sixth Odin appears during a Dynamis Wave 3 boss
 
+Food is usually optional, but there are a few notable options:
+
+* [Rolanberry Daifuku](https://www.bg-wiki.com/ffxi/Rolan._Daifuku) has 50 Magic Accuracy, and can be purchased for 5000g from any [Curio Vendor Moogle](https://www.bg-wiki.com/ffxi/Curio_Vendor_Moogle). The high-quality version is not generally worth making or buying.
+* [Tropical Crepe](https://www.bg-wiki.com/ffxi/Tropical_Crepe) has 90 Magic Accuracy, but must be crafted by a Culinarian.
+* [Miso Ramen](https://www.bg-wiki.com/ffxi/Miso_Ramen) offers 50 Magic Evasion and up to 170 DEF. It is also crafted.
+
 Use SCH as your subjob most of the time:
 
 * [Light Arts](https://www.bg-wiki.com/ffxi/Light_Arts) gives 10% Fast Cast and recast for healing and enhancing spells
@@ -81,15 +87,15 @@ A RDM subjob can also be useful:
 
 There are five WHM job abilities you should care about:
 
-* [Afflatus Solace](https://www.bg-wiki.com/ffxi/Afflatus_Solace) should be your default option. Make sure it's active before you start fights. This job ability applies cureskin when you use a Cure spell, and this is your primary tool for mitigating damage. Cureskin will not occur if your target is already at full health.
-* [Afflatus Misery](https://www.bg-wiki.com/ffxi/Afflatus_Misery) is mostly useful until if and when you get a Yagrush. While Misery is active, you can use Esuna to remove debuffs from your entire group if you also have the same debuff. This is especially useful for Amnesia, as well as fights where a monster uses multiple debuffs at the same time. For example, you should switch to Misery just before fighting RDM and BLU monsters in Dynamis, because these monsters tend to debuff your entire party rapidly. But when you're done fighting those monsters, switch back to Solace.
-* [Devotion](https://www.bg-wiki.com/ffxi/Devotion) helps your tanks (and less often, other mage jobs) avoid downtime by restoring their MP. Remember to heal yourself after you use it, though.
-* [Sacrosanctity](https://www.bg-wiki.com/ffxi/Sacrosanctity) helps prevent deaths from monsters' Mijin Gakure, Astral Flow, and other major damage abilities.
-* Use [Asylum](https://www.bg-wiki.com/ffxi/Asylum) for bosses that have nasty debuffs. It only lasts 30 seconds, though.
+* [Afflatus Solace](https://www.bg-wiki.com/ffxi/Afflatus_Solace) should be your default option. Make sure Solace is active before you start fights. This job ability applies cureskin when you use a Cure spell, and is a critical tool for mitigating tank damage over time. Cureskin will not occur if your target is already at full health.
+* [Afflatus Misery](https://www.bg-wiki.com/ffxi/Afflatus_Misery) is essential for rapidly removing debuffs. While Misery is active, you can use Esuna to remove debuffs from your entire group when you also have the same debuffs on yourself. This is especially useful for Amnesia, as well as fights where a monster uses multiple debuffs at the same time. For example, you should switch to Misery just before fighting RDM and BLU monsters in Dynamis, because these monsters tend to debuff your entire party rapidly. Switch back to Solace when you no longer need Misery.
+* [Devotion](https://www.bg-wiki.com/ffxi/Devotion) helps your tanks (and less often, other mage jobs) avoid downtime by restoring their MP. Remember to heal yourself after you use it.
+* [Sacrosanctity](https://www.bg-wiki.com/ffxi/Sacrosanctity) helps prevent deaths from monsters' Mijin Gakure, Astral Flow, and other major damage abilities. The buff is removed by the next magic damage hit, even if that damage would have been -1 HP from Ice Spikes, so time your use carefully.
+* Use [Asylum](https://www.bg-wiki.com/ffxi/Asylum) for bosses that have nasty debuffs. It only lasts 30 seconds.
 
 And three WHM job abilities that are still useful, but less so:
 
-* [Divine Seal](https://www.bg-wiki.com/ffxi/Divine_Seal) can double a heal or (like Accession) turn a status removal spell into an area effect. However, being able to heal big numbers is rarely an issue after you get 40-50 cure potency, and Accession is almost always available.
+* [Divine Seal](https://www.bg-wiki.com/ffxi/Divine_Seal) can double a heal or, like Accession, turn a status removal spell into an area effect. However, being able to heal big numbers is rarely needed after you reach 40+ Cure Potency, and Accession is almost always available.
 * [Divine Caress](https://www.bg-wiki.com/ffxi/Divine_Caress) can prevent a monster from reapplying a debuff after you remove it. In practice, most boss monsters have high enough magic accuracy that they reapply it anyway. Consider using it for nastier debuffs, like Petrification.
 * Save [Benediction](https://www.bg-wiki.com/ffxi/Benediction) for when you are completely out of MP, or when your party has a lot of debuffs that need _immediate_ removal.
 
@@ -254,6 +260,7 @@ From your Job Point gifts, Reraise IV is excellent. Full Cure can be very useful
 
 This guide focuses mostly on beginning gear, with notes on a few key pieces and job-specific equipment (JSE) that you should upgrade. For complete gear recommendations and sets, see [the FFXIAH WHM guide, v3](https://ffxiah.com/forum/topic/55005/on-healing-hands-a-comprehensive-whm-guide-v3/).
 
+
 ### Basic Sets and Their Priorities
 
 Your immediate goal is to start building three basic sets, and reach some minimum stat values with each one:
@@ -410,3 +417,13 @@ I recommend at [making least two Ambuscade capes](https://www.bg-wiki.com/ffxi/C
 * Sap: "Cure" Potency +10%
 * Resin: Damage Taken -5%
 * Dye: Magic Accuracy +10
+
+
+### Should I Make an Ultimate Weapon?
+
+This is a personal decision that only you can make. I recommend that you avoid building any until you are sure that you want to play WHM at its highest level.
+
+* [Yagrush](https://www.bg-wiki.com/ffxi/Yagrush), our Mythic weapon, has clear value in most circumstances. Even at lv75 with no upgrades, you will rarely need to touch Afflatus Misery, and when fully upgraded it offers a stunning +70 Magic Accuracy. Its weaponskill, [Mystic Boon](https://www.bg-wiki.com/ffxi/Mystic_Boon), outclasses most other MP restore weaponskills, and is worth unlocking separately if you choose to melee with WHM.
+* [Gambanteinn](https://www.bg-wiki.com/ffxi/Gambanteinn), the Empyrean weapon, is best-in-slot for Cursna. It effectively doubles your chance of successfully removing Curse or Doom. However, the Cursna stat is not present until its nearly final form, so it is a major investment. Its weaponskill, [Dagan](https://www.bg-wiki.com/ffxi/Dagan), is also useful because you can restore HP/MP without an enemy target.
+* [Tishtrya](https://www.bg-wiki.com/ffxi/Tishtrya), the Aeonic weapon, is best-in-slot for melee damage but is of little use outside that niche. Its TP Bonus outclasses nearly every other combination of weapon and weaponskill. It augments [Realmrazer](https://www.bg-wiki.com/ffxi/Realmrazer), but you can unlock that with merit points.
+* [Mjollnir](https://www.bg-wiki.com/ffxi/Mjollnir), our Relic weapon, is not really worth making at all. It is outclassed by Tishtrya for melee, and its other stats are not particularly special. [Randgrith](https://www.bg-wiki.com/ffxi/Randgrith) is also not particularly special.
