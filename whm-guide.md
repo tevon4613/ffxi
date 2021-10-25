@@ -265,13 +265,13 @@ This guide focuses mostly on beginning gear, with notes on a few key pieces and 
 
 Your immediate goal is to start building three basic sets, and reach some minimum stat values with each one:
 
-1. Precast (30 Fast Cast)
+1. **Precast**: 30 Fast Cast
 	* This set should be automatically equipped before you cast spells. Other sets are also referred to as "midcast" sets.
 	* For now, you'll also use this set for -na spells and Raise spells to minimize their recast times.
-2. Healing (30 Cure Potency)
+2. **Healing**: 30 Cure Potency
 	* Your biggest goal is to get 30 Cure Potency by any combination of gear possible.
 	* Equip items with -Enmity or Conserve MP in other slots.
-3. Idle (-20 Damage Taken, +2 Refresh)
+3. **Idle**: -20 Damage Taken and +2 Refresh
 	* Yes, you want a [Defending Ring](https://www.bg-wiki.com/ffxi/Defending_Ring) eventually, just like every other job.
 	* Consider purchasing a pair of [Herald's Gaiters](https://www.bg-wiki.com/ffxi/Herald%27s_Gaiters) for idle movement speed. Running away is great for avoiding damage!
 	* Your GearSwap lua file should automatically equip this set after finishing any other action.
@@ -279,13 +279,13 @@ Your immediate goal is to start building three basic sets, and reach some minimu
 
 When you have at least those three sets ready, start building a few more:
 
-4. Enhancing
+4. **Enhancing**: +20% Enhancing Duration
 	* Acquire a full set of [Telchine gear](https://www.bg-wiki.com/ffxi/Category:Alluvion_Skirmish_Armor#Telchine_Armor_Set), and [augment it](https://www.bg-wiki.com/ffxi/Alluvion_Skirmish_Armor) with [Divainy-Gamainy](https://www.bg-wiki.com/ffxi/Divainy-Gamainy).
 	* You will need Snowslit/Snowdim normal quality or +1 stones for Magic Evasion, Leafdim +1 and +2 stones for Conserve MP, and Duskdim +1 and +2 stones for Enhancing Magic Duration.
-5. Cursna
+5. **Cursna**: +20 Cursna success rate
 	* Purchase at least one [Ephedra Ring](https://www.bg-wiki.com/ffxi/Ephedra_Ring) and a [Malison Medallion](https://www.bg-wiki.com/ffxi/Malison_Medallion) to get started, and build at least one WHM Ambuscade cape.
 	* Equip items with Healing Magic skill and Haste/Fast Cast in slots that do not have "Cursna +XX" potency.
-6. Enfeebling
+6. **Enfeebling**: +50 Magic Accuracy
 	* MND, Magic Accuracy, and Enfeebling Skill items are all helpful.
 	* Equip items with Conserve MP, Haste, and Fast Cast in other slots.
 
@@ -297,12 +297,12 @@ At this point, you are making your existing sets better, or making very specific
 **Idle Set**: -50% Damage Taken (DT) -> Refresh -> Magic Evasion
 <br />You will eventually want three different idle sets that individually maximize refresh, -Damage Taken, or magic evasion.
 
-**Precast Set**: 80 Fast Cast (hard cap)
-* You only need ~70 with a /SCH subjob, or ~65 for a /RDM subjob.
+**Precast Set**: 80 Fast Cast
+* 80 is a hard cap for most content. You only need ~70 with a /SCH subjob, or ~65 for a /RDM subjob.
 * Do not include Quick Magic ("Occ. Quickens Spellcasting") gear in this set.
 * Gear in this set can be useful for reducing recast timers, when included in other sets.
 
-**Quick Set**: 10 Quick Magic -> Conserve MP -> Haste/Fast Cast
+**Quick Set**: 10 Quick Magic -> Conserve MP -> (Haste/Fast Cast)
 * Use this set for casting Raise/Reraise/Arise, teleport spells, and all -na spells (except for Cursna).
 * If you use this for Erase, make sure your set includes a [Cleric's Torque](https://www.bg-wiki.com/ffxi/Cleric's_Torque).
 
@@ -323,7 +323,7 @@ Initially, you will not have many options for Cure Potency II or Afflatus Solace
 **Enhancing Set**: Enhancing Magic Duration -> Conserve MP
 <br />You should eventually use separate sets for Regen, Bar- spells, and Enhancing Skill (Boost- spells), each of which have equipment that boosts their potencies. However, all of those sets can use this set as their base.
 
-**Enfeebling**: (MND/Magic Accuracy/Enfeebling Magic skill) -> Conserve MP
+**Enfeebling**: (Magic Accuracy/Enfeebling Magic skill) -> MND -> Conserve MP
 <br />If you regularly use a /RDM subjob, consider making a separate INT-based enfeebling set.
 
 
@@ -331,19 +331,20 @@ Initially, you will not have many options for Cure Potency II or Afflatus Solace
 
 Most parties will not be structured to give you damage-dealing buffs. Still, you can solo your own Apex monsters with trusts if you are prepared to make the appropriate sets.
 
-**Nuking Set**: (Magic Atk. Bonus/Magic damage) -> (MND/Magic Accuracy/Divine Magic skill) -> Haste
+**Nuking Set**: (Magic Atk. Bonus/Magic damage) -> MND -> (Magic Accuracy/Divine Magic skill) -> Haste
 * Initially, your nuke set will look very similar to your enfeebling set.
 * Healing with Afflatus Solace active will increase your Holy/Holy II spell damage.
-* Consider a separate set with Magic Burst damage.
+* Consider a separate set with the Magic Burst Damage stat.
 
-**TP Set**: Accuracy -> Double/Triple/Quad Attack -> Store TP -> DEX
+**TP Set**: Accuracy -> (Double/Triple/Quad Attack) -> Store TP -> DEX
 * When in doubt, aim for 1200 accuracy without food buffs. Use `/checkparam` to see your current accuracy.
 * Consider separate sets for content that requires high, medium, and low accuracy.
 
 **Weaponskill Sets**: Attack -> Weapon Skill Damage -> (varies)
 * Each weapon skill has its own stat priorities, but in general, you need as much Attack as you can get.
 * Consider building sets for Hexa Strike, Black Halo, and Realmrazer specifically.
-* Mystic Boon is excellent for restoring MP but involves more than other quests.
+* You will still need some accuracy in this set, especially for multi-hit weapon skills like Hexa Strike.
+* Mystic Boon is excellent for restoring MP, but will take some extra work to acquire.
 
 
 ### The JSE Gear Journey
@@ -366,7 +367,7 @@ The Ebers Pantaloons should be the very first thing you upgrade. The general pri
 * Relic/Piety: body -> legs -> (head/hands/feet optional)
 * Empyrean/Ebers: legs -> body -> head -> hands -> (feet optional)
 
-... such that you eventually work towards maximum (+3/+3/+1) upgrades for these non-optional pieces. You should also collect the [Inyanga Tiara](https://www.bg-wiki.com/ffxi/Inyanga_Tiara) for a Regen set and [Inyanga Jubbah](https://www.bg-wiki.com/ffxi/Inyanga_Jubbah) for your Precast set. Both are from Ambuscade, and you should upgrade both of them to +2 when possible.
+You should work towards maximum (+3/+3/+1) upgrades for these non-optional pieces. You should also collect the [Inyanga Tiara](https://www.bg-wiki.com/ffxi/Inyanga_Tiara) for a Regen set and [Inyanga Jubbah](https://www.bg-wiki.com/ffxi/Inyanga_Jubbah) for your Precast set. Both are from Ambuscade, and you should upgrade both of them to +2 when possible.
 
 
 ### Other JSE Gear
@@ -418,6 +419,7 @@ I recommend at [making least two Ambuscade capes](https://www.bg-wiki.com/ffxi/C
 * Resin: Damage Taken -5%
 * Dye: Magic Accuracy +10
 
+If you choose to build melee sets, you should also build one cape for TP gain (Accuracy + Double Attack) and at least one cape for weaponskills (MND, Attack, and Weapon Skill Damage).
 
 ### Should I Make an Ultimate Weapon?
 
