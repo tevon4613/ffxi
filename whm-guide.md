@@ -102,8 +102,9 @@ And three WHM job abilities that are still useful, but less so:
 
 ## Responsible & Ethical Healing Practices
 
+### Rule 1: Pay Attention
 The first rule for WHM is to pay attention. If you cannot:
-* Notify your party when you go away from your keyboard or "AFK"
+* Notify your party if you need to go away from your keyboard or "AFK" during fights
 * Focus on your party's health, rather than damage dealing
 * Watch monster animations and the chat log to maintain basic situational awareness
 * Triage by making educated decisions about what to do next, from moment to moment
@@ -112,16 +113,20 @@ The first rule for WHM is to pay attention. If you cannot:
 
 That said, you can't always heal through everything, and there will be times you need to choose between bad and worse outcomes. Your party members will die in one hit, go AFK without warning, forget to buff you, run away when you cast buff spells, run away when you try to heal them, and stand in the Firaga V. You yourself will press the wrong macro keys, heal the wrong person, die in one hit, and stand in the Firaga V. Your job is to do your best to keep everyone alive despite inevitable mistakes.
 
-Focus your efforts on essential party members first (tank jobs and yourself), then other support jobs, and finally damage dealers. Similarly, you should also take care of your party first and then help alliance members if you're able. There are always exceptions to these rules, and that's why ...
+Focus your attention and efforts on essential party members first (tank jobs and yourself), then other support jobs, and finally damage dealers. Similarly, you should also take care of your party first and then help alliance members if you're able. 
 
-The second rule is to be prepared. Fighting a new boss, or jumping into content you've never healed before? Do a little research. As a WHM, you want to know:
+
+### Rule 2: Be Prepared
+There are always exceptions to these rules, and that's why the second rule is to be prepared. Are you fighting a new boss, or jumping into content you've never healed before? Do a little research. As a WHM, you want to know:
 * Which monster abilities do lots of damage?
 * Which monster abilities result in debuffs?
 * Which monster abilities can be avoided by staying out of range?
 
 Sometimes, this knowledge can be the difference between a successful fight and a wipe. Most of the time, it just makes your job a lot less stressful. If you're not convinced already, see the section "Sweat the Small Things" below for why you should care.
 
-The third and final rule for WHM is to triage smartly: prevent imminent death, then fix problems, then do improvements. Or, in more detail:
+
+### Rule 3: Triage Smartly
+The third and final rule for WHM is to triage smartly. Prevent imminent death, _then_ fix problems, and _last_ do improvements. Or, in more detail:
 
 1. Heal party members with 25%/critical/red HP
 2. Remove bad debuffs, like Doom, Petrify, Sleep, and Defense Down
@@ -134,20 +139,22 @@ The third and final rule for WHM is to triage smartly: prevent imminent death, t
 9. Prepare for incoming Bad Stuff™ by mitigating or preventing attacks
 10. Rebuff yourself and party members
 
-... and finally, IF you are confident that you can avoid priorities 1-5 for two seconds:
+... and finally, if you are confident that you can avoid priorities 1-5 for the next few seconds:
 
 11. Debuff monsters
 12. Damage monsters with spells or your weapon
 
 Even in the very best groups with the most ridiculously geared party members, this should be enough to keep you busy all the time. If you find yourself not doing anything for a minute or more, you're probably overlooking something that could help you and your party.
 
+
+### When and How to Debuff
 When you do not have a Red Mage available:
 * Silence helps against monsters that can cast spells
 * Addle gives you more time to react when a monster is no longer silenced
 * Dia II reduce monster defense
 * Paralyze and Slow reduce monster attack speed
 
-Banish spells can be useful when fighting larger groups of undead monsters. They reduce defense on all skeletons, ghosts, Fomor, and several other monster families. You should avoid casting Banishga unless you know that your tank has hit all nearby monsters.
+Banish spells are not very potent for damage dealing, but they are very useful when fighting undead bosses and monsters. They reduce defense on all skeletons, ghosts, Fomor, and several other monster families. (Sadly, they have no effect on Dynamis monsters.) You should avoid casting Banishga unless you know that your tank has gained enmity on all nearby monsters.
 
 As a WHM, you also have one crowd control spell: [Repose](https://www.bg-wiki.com/ffxi/Repose). This is a single-target, Light-elemental sleep spell with a long recast time. Repose is difficult to cast on higher-level monsters, but it can easily keep a Charmed player from causing more problems.
 
@@ -156,7 +163,7 @@ As a WHM, you also have one crowd control spell: [Repose](https://www.bg-wiki.co
 
 Why you should bother? It sounds like a lot of work to look up fight mechanics, worry about Bar- spells, remove minor debuffs, and "try hard" in general. This is where we appeal to the selfish loot whore that we know lurks deep inside you. Even if you don't care about your party members—_isn't Raise in the game for a reason?_—paying a little attention to mechanics will make your life easier in the long run.
 
-As an example, let's say your entire party gets hit by Drown. No big deal, it's just a tiny bit of damage. But a minute later, the monster uses Def Down + Magic Def Down on your entire party, and then it starts casting Meteor. Your tank is taking 20-50% more damage, you can't guarantee that your next Erase will remove the Magic Def Down debuff, and you've got 500+ damage coming in two seconds. This is not a situation you want to be in.
+As an example, let's say your entire party gets hit by Drown. No big deal, it's just a tiny bit of damage plus STR Down. But a minute later, the monster uses Def Down + Magic Def Down on your entire party, and then it starts casting Meteor. Your tank is taking 20-50% more damage, you can't guarantee that your next Erase will remove the Magic Def Down debuff, and you've got 500+ damage coming in two seconds. This is not a situation you want to be in.
 
 So, before your next fight:
 
@@ -176,7 +183,7 @@ So, before your next fight:
 | Lullaby			    | Barsleepra                   |
 | Blind, Sleep			    | Barblindra/Barsleepra        |
 
-_This should only take a minute or two at the most._ You don't have to memorize all the monster's mechanics (or this debuff list), but you should strongly consider making a bookmark, post-it on your monitor, or similar note for yourself. If you have a second monitor, move Netflix off to the side and keep a browser window handy as your cheat sheet.
+_This should only take a minute at the most._ You don't have to memorize all the monster's mechanics (or this debuff list), just look through and look for things you can prepare for ahead of time. Consider making a browser bookmark, post-it on your monitor, or similar note for yourself so that you can refer to common boss details quickly.
 
 When a debuff has both an associated element and a bar-status spell, use both. For example, either Barparalyzra or Barblizzara will help reduce the chance that a monster can Paralyze you, while both together have an even higher chance of preventing Paralyze. Combine this with Divine Caress when people do get hit, and tough situations can become much less frantic.
 
@@ -187,7 +194,7 @@ For situations where a monster has lots of potential attacks, you should prevent
 4. [Disease](https://www.bg-wiki.com/ffxi/Disease)/[Plague](https://www.bg-wiki.com/ffxi/Plague), [Blind](https://www.bg-wiki.com/ffxi/Blind_(Status)), [Addle](https://www.bg-wiki.com/ffxi/Addle_(Status)), and [Slow](https://www.bg-wiki.com/ffxi/Slow_(Status)) reduce your party's damage and healing output.
 5. [Poison](https://www.bg-wiki.com/ffxi/Poison_(Status)) and other damage over time effects make you have to heal more.
 
-Some fights will change the priority of debuffs. For example, a monster may have a poison Area of Effect (AoE) aura that does 300 damage every 3 seconds, in addition to another attack that can Paralyze a single target. Barwatera + Barpoisonra would reduce the number of people you have to remove Poison from, saving you both time and MP. In this case, preventing the Poison would be more useful than preventing the occasional Paralyze.
+Some fights will change the priority of debuffs. For example, a monster may have a poison Area of Effect (AoE) aura that does 300 damage every 3 seconds, in addition to another attack that can Paralyze a single target. Barwatera + Barpoisonra would reduce the number of people you have to remove Poison from, saving you both time and MP. In this case, preventing the Poison would be more useful than preventing an occasional Paralyze.
 
 Beyond Bar- spells, use Stoneskin and Regen IV to prevent or mitigate pure damage. Try to cast these before the attack happens.
 * [Stoneskin](https://www.bg-wiki.com/ffxi/Stoneskin) requires Accession to cast on party members. Blue Mages and Summoners can cast Diamondhide or Earthen Ward instead; they can cast those spells more often, but your Stoneskin will likely absorb more damage. Stoneskin is also one of the few ways to "heal" a player that has the ["Super Curse" debuff](https://www.bg-wiki.com/ffxi/Curse_(HP_Recovery)).
@@ -201,8 +208,9 @@ White Mages have many useful buffs, both for yourself and others. This list is i
 
 1. Keep Reraise on yourself at all times.
 	* This includes right after you get up from KO and are still Weakened.
-	* You may want to cast Haste on yourself first, if you think you may die again soon, to reduce the recast timer.
-2. Keep Aurorastorm on yourself at all times for +15% heal potency.
+	* You may want to cast Haste on yourself first, if you think you may die again soon, to reduce the Reraise recast timer.
+2. Keep Aurorastorm on yourself at all times for up to +15% heal potency.
+	* The full potency requires a Korin Obi or Hachirin-no-Obi (see "Notable Gear", below).
 	* This starts to matter less when you have absurd levels of Cure Potency II, but 15% is still 15%.
 	* Ask other players if they want -storm spells before casting them automatically.
 3. As mentioned before, keep Afflatus Solace active unless you have a reason to use Afflatus Misery.
