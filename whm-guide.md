@@ -437,3 +437,17 @@ This is a personal decision that only you can make. I recommend that you avoid b
 * [Gambanteinn](https://www.bg-wiki.com/ffxi/Gambanteinn), the Empyrean weapon, is best-in-slot for Cursna. It effectively doubles your chance of successfully removing Curse or Doom. However, the Cursna stat is not present until its nearly final form, so it is a major investment. Its weaponskill, [Dagan](https://www.bg-wiki.com/ffxi/Dagan), is also useful because you can restore HP/MP without an enemy target.
 * [Tishtrya](https://www.bg-wiki.com/ffxi/Tishtrya), the Aeonic weapon, is best-in-slot for melee damage but is of little use outside that niche. Its TP Bonus outclasses nearly every other combination of weapon and weaponskill. It augments [Realmrazer](https://www.bg-wiki.com/ffxi/Realmrazer), but you can unlock that with merit points.
 * [Mjollnir](https://www.bg-wiki.com/ffxi/Mjollnir), our Relic weapon, is not really worth making at all. It is outclassed by Tishtrya for melee, and its other stats are not particularly special. [Randgrith](https://www.bg-wiki.com/ffxi/Randgrith) is also not particularly special.
+
+
+## Lua Example
+
+These files are provided _without support_. Do not contact the author to request help. There are plenty of lua tutorials online, including FFXI-specific tutorials.
+
+* [WHM specific](config/YourName_WHM.lua)
+* [Include file](config/YourName_inc.lua)
+
+To use these files:
+1. Download and copy both files to your `/Windower4/addons/GearSwap/data/` folder.
+2. Rename both files so that `YourName` is instead your character's name.
+3. Rename the references on lines 2 and 7 in the _WHM.lua file so that the filenames match.
+4. Start the game. If you are already in game, switch to your WHM job or type `//gs reload`.
