@@ -10,6 +10,7 @@ This guide explains how to gear up and play a White Mage to acceptable levels wi
 <br/>[The Very Basics](#the-very-basics)
 <br/>[Responsible & Ethical Healing Practices](#responsible--ethical-healing-practices)
 <br/>[Gear](#gear)
+<br/>[Lua Example](#lua-example)
 
 ## Expectations and Assumptions
 
