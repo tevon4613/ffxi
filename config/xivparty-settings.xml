@@ -1,73 +1,67 @@
 <?xml version="1.1" ?>
 <!--
   To install this, copy it to this folder inside your Windower folder:
-  ..\Windower4\addons\XivParty\data\settings.xml
+  ..\Windower4\addons\XivParty\data\whm.xml
   Make sure that you rename the file if you downloaded it.
   
   To reload the shortcuts addon, type this command in game (including slashes):
   //lua r xivparty
 -->
 <settings>
-	<global>
-		<alignBottom>false</alignBottom>
-		<buffs>
-			<customOrder>true</customOrder>
-			<filterMode>blacklist</filterMode>
-			<filters />
-		</buffs>
-		<hideSolo>false</hideSolo>
-		<layout>auto</layout>
-		<posX>50</posX>
-		<posY>400</posY>
-		<rangeIndicator>0</rangeIndicator>
-		<rangeIndicatorFar>0</rangeIndicatorFar>
-		<spacingY>4</spacingY>
-	</global>
-	<temas>
-		<buffs>
-			<filterMode>whitelist</filterMode>
-			<filters>0;1;15;14;17;2;193;19;10;28;11;12;567;177;7;18;13;565;194;4;566;3;540;5;156;6;29;8;31;9;20;16;21;22;30;128;129;130;131;132;133;134;135;186;23;192;217;146;561;147;557;148;562;149;558;174;563;175;559;404;564;167;560;298;572;144;145;189;168;136;137;138;139;140;141;142;597;33;580;265;581;40;41;36;37;39;42;539;43;541;80;81;82;83;84;85;86;119;120;121;122;123;124;125;542;543;544;545;546;547;548;116;113;69;70;71;100;101;102;103;104;105;106;107;108;109;110;111;112;286;178;179;180;181;182;183;184;185;589;590;591;592;593;594;595;596;275;</filters>
-			<!--
-			see Windower4/res/buffs.lua for buff IDs
-
-      debuffs
-			===============
-			KO, weakness
-			0;1;
-			doom, amnesia, charm, sleep, lullaby, stun, terror, bind, weight1, weight2, encumbrance,
-			15;14;17;2;193;19;10;28;11;12;567;177;
-			petrification, gradual petrification
-			7;18;
-			slow, slow2, elegy, paralyze, paralyze2, poison, poison2, blind, flash, silence, mute
-			13;565;194;4;566;3;540;5;156;6;29;
-			disease, plague, curse, curse2, amnesia, addle, intimidate, bane
-			8;31;9;20;16;21;22;30;
-			burn, frost, choke, rasp, shock, drown, dia, bio, helix, kaustra
-			128;129;130;131;132;133;134;135;186;23;
-			requiem, threnody, acc down (x2), atk down (x2), eva down (x2), def down (x2), macc down (x2)
-			192;217;146;561;147;557;148;562;149;558;174;563;
-			matk down (x2), meva down (x2), mdef down (x2), crit eva down, avoid down, HP down, MP down
-			175;559;404;564;167;560;298;572;144;145;
-			TP down, inhibit TP, str/dex/vit/agi/int/mnd/chr down; inundation
-			189;168;136;137;138;139;140;141;142;597;
-
-			buffs
-			===============
-			haste, haste2, flurry, flurry2, prot, shell, blink, stoneskin, aquaveil, regen (x2), refresh (x2)
-			33;580;265;581;40;41;36;37;39;42;539;43;541;
-			str/dex/vit/agi/int/mnd/chr boost (x3)
-			80;81;82;83;84;85;86;119;120;121;122;123;124;125;542;543;544;545;546;547;548;
-			phalanx, reraise, invis, deodorize, sneak
-			116;113;69;70;71;
-			barfire/blizz/aero/stone/thunder/water, barsleep/poison/para/blind/silence/petra/virus/amnesia
-			100;101;102;103;104;105;106;107;108;109;110;111;112;286;
-			fire/hail/wind/sand/thunder/rain/aurora/voidstorm (x2)
-			178;179;180;181;182;183;184;185;589;590;591;592;593;594;595;596;
-			auspice
-			275;
-			-->
-		</buffs>
-		<posX>-4</posX>
-		<posY>414</posY>
-	</temas>
+    <global>
+        <buffs>
+            <customOrder>true</customOrder>
+            <filterMode>blacklist</filterMode>
+            <filters />
+        </buffs>
+        <jobEnabled>false</jobEnabled>
+        <rangeIndicator>0</rangeIndicator>
+        <rangeIndicatorFar>0</rangeIndicatorFar>
+    </global>
+    <temas>
+        <buffs>
+            <filterMode>whitelist</filterMode>
+            <filters>0;1;15;14;17;2;193;19;10;28;11;12;567;177;7;18;13;565;194;4;566;3;540;5;156;6;29;8;31;9;20;16;21;22;30;128;129;130;131;132;133;134;135;186;23;192;217;146;561;147;557;148;562;149;558;174;563;175;559;404;564;167;560;298;572;144;145;189;168;136;137;138;139;140;141;142;597;33;580;40;41;36;37;39;42;539;80;81;82;83;84;85;86;119;120;121;122;123;124;125;542;543;544;545;546;547;548;116;113;69;70;71;100;101;102;103;104;105;106;107;108;109;110;111;112;286;178;179;180;181;182;183;184;185;589;590;591;592;593;594;595;596;275;</filters>
+            <!--
+            see Windower4/res/buffs.lua for buff IDs
+            ===============
+            debuffs
+            ===============
+            KO, weakness
+            0;1;
+            doom, amnesia, charm, sleep, lullaby, stun, terror, bind, weight1, weight2, encumbrance,
+            15;14;17;2;193;19;10;28;11;12;567;177;
+            petrification, gradual petrification
+            7;18;
+            slow, slow2, elegy, paralyze, paralyze2, poison, poison2, blind, flash, silence, mute
+            13;565;194;4;566;3;540;5;156;6;29;
+            disease, plague, curse, curse2, amnesia, addle, intimidate, bane
+            8;31;9;20;16;21;22;30;
+            burn, frost, choke, rasp, shock, drown, dia, bio, helix, kaustra
+            128;129;130;131;132;133;134;135;186;23;
+            requiem, threnody, acc down (x2), atk down (x2), eva down (x2), def down (x2), macc down (x2)
+            192;217;146;561;147;557;148;562;149;558;174;563;
+            matk down (x2), meva down (x2), mdef down (x2), crit eva down, avoid down, HP down, MP down
+            175;559;404;564;167;560;298;572;144;145;
+            TP down, inhibit TP, str/dex/vit/agi/int/mnd/chr down; inundation
+            189;168;136;137;138;139;140;141;142;597;
+            ===============
+            buffs
+            ===============
+            haste, haste2, prot, shell, blink, stoneskin, aquaveil, regen (x2)
+            33;580;40;41;36;37;39;42;539;
+            str/dex/vit/agi/int/mnd/chr boost (x3)
+            80;81;82;83;84;85;86;119;120;121;122;123;124;125;542;543;544;545;546;547;548;
+            phalanx, reraise, invis, deodorize, sneak
+            116;113;69;70;71;
+            barfire/blizz/aero/stone/thunder/water, barsleep/poison/para/blind/silence/petra/virus/amnesia
+            100;101;102;103;104;105;106;107;108;109;110;111;112;286;
+            fire/hail/wind/sand/thunder/rain/aurora/voidstorm (x2)
+            178;179;180;181;182;183;184;185;589;590;591;592;593;594;595;596;
+            auspice
+            275;
+            -->
+        </buffs>
+        <jobEnabled>true</jobEnabled>
+    </temas>
 </settings>
