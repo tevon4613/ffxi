@@ -1,24 +1,24 @@
 -- ------------------------------------------
---    Modes and Hotkeys
+--	Modes and Hotkeys
 -- ------------------------------------------
 --	status
 --		Reports current modes and re-equips current idle or engaged set
 --		hotkey: [Ctrl]+[/]
---  dd_state
+--	dd_state
 --		Controls acc/macc vs. atk/mab
 -- 		default: balanced (|| accuracy || potency)
 --		hotkeys:
 --			balanced	[Alt]+[Backspace]
 --			potency		[Alt]+[-]
 --			accuracy	[Alt]+[=]
---  dt_state
+--	dt_state
 --		Controls overall Damage Taken
 --		default: balanced (|| invincible || squishy)
 --		hotkeys:
 --			balanced	[Ctrl]+[Backspace]
 --			squishy		[Ctrl]+[-]
 --			invincible	[Ctrl]+[=]
---  dt_type
+--	dt_type
 --		Cycles through Damage Taken type
 --		default: balanced (||-> magic ||-> physical)
 --		hotkey:	[Ctrl]+[.]
@@ -320,6 +320,7 @@ opposing_elements = {
 quickspells = T{
 	"Raise","Raise II","Raise III","Arise","Reraise","Reraise II","Reraise III","Reraise IV",
 	"Teleport-Mea","Teleport-Dem","Teleport-Holla","Teleport-Altep","Teleport-Yhoat","Teleport-Vahzl","Recall-Meriph","Recall-Jugner","Recall-Pashh",
+	"Warp","Warp II","Escape","Tractor","Retrace",
 }
 enhspells = T{
 	"Aquaveil","Haste","Blink","Stoneskin","Invisible","Sneak","Deodorize","Auspice",
