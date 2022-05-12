@@ -1,11 +1,12 @@
 include('organizer-lib')
-include('YourName_inc.lua')
+include('Temas_inc.lua')
 
 function get_sets()
 	-- Sets up a lot of stuff: (job number, dressup castmode, default mode)
 	-- The job number must match the job's lockstyle and macro book.
-	-- See YourName_inc.lua for details.
+	-- See Temas_inc.lua for details.
 	startup(1, true, "caster")
+	send_command('bind ^g gs c gambanteinn toggle')
 	-- Sets that end in "base" are modified in variant_sets() depending on
 	-- DT/DD/nuke/etc modes. The sets in this function correspond to the
 	-- "balanced" or default setting for each of those modes.
@@ -13,15 +14,14 @@ function get_sets()
 	-- 50% DT, 8 refresh
 	sets.idlebase = {
 		main="Malignance Pole",sub="Umbra Strap",ammo="Homiliary",
-		head="Befouled Crown",neck="Loricate Torque +1",left_ear="Eabani Earring",right_ear="Etiolation Earring",
-		body="Theo. Bliaut +3",hands="Bunzi's Gloves",left_ring="Stikini Ring +1",right_ring="Defending Ring",
-		back={name="Alaunus's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','"Fast Cast"+10','Damage taken-5%',}},
+		head="Volte Beret",neck="Loricate Torque +1",left_ear="Eabani Earring",right_ear="Etiolation Earring",
+		body="Shamash Robe",hands="Bunzi's Gloves",left_ring="Stikini Ring +1",right_ring="Defending Ring",
+		back={name="Alaunus's Cape", augments={'AGI+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Haste+10','Damage taken-5%',}},
 		waist="Carrier's Sash",legs="Volte Brais",feet="Herald's Gaiters",
 	}
 	-- 48% DT/10% PDT/3% MDT, 1366 def, 830 eva, 730-745 meva, 3-4 refresh (with fucho)
 	sets.idle_invincible_balanced = set_combine(sets.idlebase,{
 		main="Daybreak",sub="Genmei Shield",ammo="Staunch Tathlum +1",
-		head="Inyanga Tiara +2",
 		body="Nyame Mail",hands="Nyame Gauntlets",left_ring="Inyanga Ring",
 		legs="Nyame Flanchard",feet="Inyan. Crackows +2",
 	})
@@ -37,12 +37,20 @@ function get_sets()
 	-- minimal DT/meva, but 11 refresh
 	sets.idle_squishy = set_combine(sets.idlebase,{
 		main="Daybreak",sub="Genmei Shield",
-		head="Inyanga Tiara +2",
 		hands="Inyan. Dastanas +2",right_ring="Inyanga Ring",
 	})
 	sets.idle = sets.idlebase
+	-- HMP/refresh
+	sets.restMP = set_combine(sets.idlebase,{
+		main="Mpaca's Staff",
+		neck="Sanctity Necklace",
+		hands={name="Chironic Gloves", augments={'Attack+8','DEX+8','"Refresh"+1','Mag. Acc.+9 "Mag.Atk.Bns."+9',}},
+		right_ring="Inyanga Ring",
+		waist="Shinjutsu-no-Obi +1",feet="Inyan. Crackows +2",
+	})
 	-- mix of acc/matk/stp and DT
 	sets.tpbase = {
+		--main="Marin Staff +1",sub="Enki Strap",ammo="Staunch Tathlum +1",
 		main="Yagrush",sub="Genmei Shield",ammo="Staunch Tathlum +1",
 		head="Aya. Zucchetto +2",neck="Lissome Necklace",left_ear="Telos Earring",right_ear="Brutal Earring",
 		body="Ayanmo Corazza +2",hands="Bunzi's Gloves",left_ring="Petrov Ring",right_ring="Defending Ring",
@@ -52,7 +60,7 @@ function get_sets()
 	sets.tp = sets.tpbase
 	sets.tp_balanced_accuracy = set_combine(sets.tpbase,{
 		neck="Combatant's Torque",right_ear="Mache Earring +1",
-		left_ring="Ilabrat Ring",
+		left_ring="Chirich Ring +1",
 		waist="Grunfeld Rope",
 	})
 	sets.tp_balanced_potency = set_combine(sets.tpbase,{
@@ -68,7 +76,7 @@ function get_sets()
 	})
 	sets.tp_invincible_accuracy = set_combine(sets.tp_invincible_balanced,{
 		neck="Combatant's Torque",right_ear="Mache Earring +1",
-		left_ring="Ilabrat Ring",
+		left_ring="Chirich Ring +1",
 		waist="Grunfeld Rope",
 	})
 	sets.tp_invincible_potency = set_combine(sets.tp_invincible_balanced,{
@@ -83,7 +91,7 @@ function get_sets()
 		waist="Grunfeld Rope",
 	})
 	sets.tp_squishy_accuracy = set_combine(sets.tp_squishy_balanced,{
-		left_ring="Ilabrat Ring",right_ring="Apate Ring",
+		left_ring="Chirich Ring +1",right_ring="Chirich Ring +1",
 		waist="Grunfeld Rope",
 	})
 	sets.tp_squishy_potency = set_combine(sets.tp_squishy_balanced,{
@@ -91,23 +99,13 @@ function get_sets()
 		waist="Grunfeld Rope",
 	})
 
-	-- HMP/refresh
-	sets.idlemp50 = {waist="Fucho-no-obi",}
-	sets.restMP = {
-		main="Contemplator +1",ammo="Homiliary",
-		head="Befouled Crown",
-		body="Theo. Bliaut +3",hands="Inyan. Dastanas +2",left_ring="Stikini Ring +1",right_ring="Inyanga Ring",
-		waist="Shinjutsu-no-Obi +1",legs="Volte Brais",
-	}
-
 	-- Fast cast (cap 80% || 78% with /sch || 65% with /rdm):
 	-- = 91% FC, or 77% with no weapon swap
 	sets.pre.default = {
 		main="Grioavolr",sub="Clerisy Strap +1",ammo=empty,
 		head="Nahtirah Hat",neck="Clr. Torque +2",left_ear="Malignance Earring",right_ear="Enchntr. Earring +1",
-		body="Inyanga Jubbah +2",hands="Gende. Gages +1",left_ring="Kishar Ring",right_ring="Prolix Ring",
-		back={name="Alaunus's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','"Fast Cast"+10','Damage taken-5%',}},
-		waist="Embla Sash",legs="Volte Brais",feet="Regal Pumps +1",
+		body="Zendik Robe",hands="Gende. Gages +1",left_ring="Kishar Ring",right_ring="Prolix Ring",
+		back="Fi Follet Cape +1",waist="Embla Sash",legs="Volte Brais",feet="Regal Pumps +1",
 	}
 	sets.pre.na = set_combine(sets.pre.default, {
 		main="Yagrush",sub="Thuellaic Ecu +1",
@@ -118,92 +116,110 @@ function get_sets()
 		ammo="Impatiens",
 		right_ear="Calamitous Earring",
 		left_ring="Veneficium Ring",right_ring="Mephitas's Ring +1",
-		back="Perimede Cape",waist="Shinjutsu-no-Obi +1",legs="Lengo Pants",feet="Kaykaus Boots +1",
+		legs={name="Telchine Braconi", augments={'Mag. Evasion+20','"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
+		back="Perimede Cape",waist="Shinjutsu-no-Obi +1",feet="Kaykaus Boots +1",
 	})
 
 	-- Weapon skill bonuses
-	-- STR/MND: Shining Strike, Seraph Strike, Judgment, Hexa Strike, Flash Nova, Starburst, Sunburst
+	-- MND>STR: Black Halo, Mystic Boon, Retribution
 	sets.pre.ws = {
 		ammo="Amar Cluster",
-		head="Piety Cap +3",neck="Clr. Torque +2",left_ear="Telos Earring",right_ear="Brutal Earring",
-		body="Piety Bliaut +3",hands="Piety Mitts +3",left_ring="Shukuyu Ring",right_ring="Ilabrat Ring",
+		head="Nyame Helm",neck="Clr. Torque +2",left_ear="Malignance Earring",right_ear="Regal Earring",
+		body="Nyame Mail",hands="Nyame Gauntlets",left_ring="Shukuyu Ring",right_ring="Metamor. Ring +1",
 		back={name="Alaunus's Cape", augments={'MND+20','Accuracy+20 Attack+20','MND+10','Weapon skill damage +10%','Damage taken-5%',}},
-		waist="Prosilio Belt +1",legs="Piety Pantaln. +3",feet="Piety Duckbills +3",
+		waist="Grunfeld Rope",legs="Nyame Flanchard",feet="Nyame Sollerets",
 	}
-	-- MND>STR: Black Halo, Mystic Boon, Retribution
-	sets.pre["Black Halo"] = set_combine(sets.pre.ws,{
-		left_ear="Malignance Earring",
-		left_ring="Metamor. Ring +1",
-		waist="Luminary Sash",
-	})
-	sets.pre["Mystic Boon"] = set_combine(sets.pre["Black Halo"], {
-		waist="Grunfeld Rope",
-	})
-	sets.pre["Retribution"] = sets.pre["Black Halo"]
+	sets.pre["Mystic Boon"] = sets.pre.ws
+	sets.pre["Black Halo"] = sets.pre.ws
+	sets.pre["Retribution"] = sets.pre.ws
+	-- STR/MND: Judgment, Starburst, Sunburst
 	-- STR: Brainshaker, Heavy Swing, Shell Crusher, Full Swing
 	sets.pre.wsstr = set_combine(sets.pre.ws, {
-		neck="Caro Necklace",left_ear="Odnowa Earring +1",
-		back="Buquwik Cape",
+		neck="Caro Necklace",left_ear="Telos Earring",right_ear="Brutal Earring",
+		right_ring="Ilabrat Ring",
+		waist="Prosilio Belt +1",
 	})
+	sets.pre["Judgment"] = sets.pre.wsstr
 	sets.pre["Brainshaker"] = sets.pre.wsstr
 	sets.pre["Heavy Swing"] = sets.pre.wsstr
 	sets.pre["Shell Crusher"] = sets.pre.wsstr
+	sets.pre["Starburst"] = sets.pre.wsstr
+	sets.pre["Sunburst"] = sets.pre.wsstr
 	sets.pre["Full Swing"] = sets.pre.wsstr
+	-- multihit: Hexa Strike (STR), Realmrazer (MND)
+	sets.pre.wsmulti = set_combine(sets.pre.ws, {
+		head="Piety Cap +3",
+		body="Piety Bliaut +3",hands="Piety Mitts +3",left_ring="Rufescent Ring",
+		legs="Piety Pantaln. +3",feet="Piety Duckbills +3",
+	})
+	sets.pre["Realmrazer"] = set_combine(sets.pre.wsmulti,{
+		waist="Luminary Sash",
+	})
+	sets.pre["Hexa Strike"] = set_combine(sets.pre.wsmulti,{
+		left_ear="Telos Earring",
+		right_ring="Ilabrat Ring",
+	})
+	-- elemental WS
+	-- STR/MND: Shining Strike, Seraph Strike, Flash Nova
 	-- STR/INT: Rock Crusher, Earth Crusher, Cataclysm
-	sets.pre["Cataclysm"] = set_combine(sets.pre.ws,{
-		ammo="Ghastly Tathlum",
-		back="Buquwik Cape",
+	sets.pre.wselem = set_combine(sets.pre.ws,{
+		ammo="Pemphredo Tathlum",
+		left_ring="Freke Ring",
+		waist="Orpheus's Sash",
 	})
-	sets.pre["Rock Crusher"] = sets.pre["Cataclysm"]
-	sets.pre["Earth Crusher"] = sets.pre["Cataclysm"]
+	sets.pre["Shining Strike"] = sets.pre.wselem
+	sets.pre["Seraph Strike"] = sets.pre.wselem
+	sets.pre["Flash Nova"] = sets.pre.wselem
+	sets.pre["Rock Crusher"] = sets.pre.wselem
+	sets.pre["Earth Crusher"] = sets.pre.wselem
+	sets.pre["Cataclysm"] = set_combine(sets.pre.wselem,{
+		head="Pixie Hairpin +1",
+	})
 	-- INT: Shattersoul
-	sets.pre["Shattersoul"] = set_combine(sets.pre.ws,{
-		ammo="Ghastly Tathlum",
-		left_ring="Metamor. Ring +1",
-		back="Toro Cape",
-	})
 	-- INT/MND: Spirit Taker
-	sets.pre["Spirit Taker"] = set_combine(sets.pre.ws,{
+	sets.pre.wsint = set_combine(sets.pre.wselem,{
 		ammo="Ghastly Tathlum",
-		left_ring="Metamor. Ring +1",
+		waist="Acuity Belt +1",
 	})
-	-- MND: Realmrazer
-	sets.pre["Realmrazer"] = set_combine(sets.pre.ws,{
-		left_ear="Malignance Earring",
-		left_ring="Metamor. Ring +1",right_ring="Rufescent Ring",
-	})
+	sets.pre["Shattersoul"] = sets.pre.wsint
+	sets.pre["Spirit Taker"] = sets.pre.wsint
 
 	-- "base" midcast sets
 	-- purely haste/fc, except for stikini
 	sets.mid.default = {
 		main="Grioavolr",sub="Clerisy Strap +1",ammo="Hasty Pinion +1",
 		head="Nahtirah Hat",neck="Clr. Torque +2",left_ear="Loquac. Earring",right_ear="Enchntr. Earring +1",
-		body="Inyanga Jubbah +2",hands="Fanatic Gloves",left_ring="Stikini Ring +1",right_ring="Prolix Ring",
-		back={name="Alaunus's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','"Fast Cast"+10','Damage taken-5%',}},
+		body="Zendik Robe",hands="Fanatic Gloves",left_ring="Stikini Ring +1",right_ring="Prolix Ring",
+		back={name="Alaunus's Cape", augments={'AGI+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Haste+10','Damage taken-5%',}},
 		waist="Witful Belt",legs="Volte Brais",feet="Regal Pumps +1",
 	}
 	-- Conserve MP (77+1%)
 	sets.mid.conserve = set_combine(sets.mid.default,{
 		ammo="Pemphredo Tathlum",
-		head="Telchine Cap",neck="Incanter's Torque",left_ear="Mendi. Earring",right_ear="Calamitous Earring",
-		body="Vedic Coat",hands="Shrieker's Cuffs",right_ring="Mephitas's Ring +1",
-		back="Fi Follet Cape +1",waist="Shinjutsu-no-Obi +1",legs="Lengo Pants",feet="Kaykaus Boots +1",
+		head={name="Telchine Cap", augments={'Mag. Evasion+21','"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
+		neck="Incanter's Torque",left_ear="Mendi. Earring",right_ear="Calamitous Earring",
+		body={name="Telchine Chas.", augments={'Mag. Evasion+20','"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
+		hands="Shrieker's Cuffs",right_ring="Mephitas's Ring +1",
+		legs={name="Telchine Braconi", augments={'Mag. Evasion+20','"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
+		back="Fi Follet Cape +1",waist="Shinjutsu-no-Obi +1",feet="Kaykaus Boots +1",
 	})
 	-- haste/FC plus some ConsMP
 	sets.mid.recast = set_combine(sets.mid.default,{
 		right_ear="Calamitous Earring",
 		right_ring="Mephitas's Ring +1",
-		waist="Shinjutsu-no-Obi +1",legs="Lengo Pants",feet="Kaykaus Boots +1",
+		legs={name="Telchine Braconi", augments={'Mag. Evasion+20','"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
+		waist="Shinjutsu-no-Obi +1",feet="Kaykaus Boots +1",
 	})
 
-	-- Cure and Curaga/Cura
 	-- Potency II > solace > Potency >=50 > (1heal_skill = 2mnd = 4vit) > enmity > cons. mp > *
-	-- 11+11 kaykaus mitra/boots + 10 torque + 6 nourish + 5 menelaus + 10 cape == 53 pot
+	-- 11 kaykaus mitra + 17 kaykaus boots + 10 torque + 5 menelaus + 10 cape == 53 CPI
+	-- 4 kaykaus + 10 theo+3 + 2 glorious + 5 janniston + 2 queller = 23(-8) CPII
+	-- 10 queller + 25 neck + 5 glorious + 6 Tbody + 7 Thands + 6 kboots + 7 janniston = 66(-16) enmity
 	sets.mid.cure = {
 		main="Queller Rod",sub="Thuellaic Ecu +1",ammo="Pemphredo Tathlum",
-		head="Kaykaus Mitra +1",neck="Clr. Torque +2",left_ear="Glorious Earring",right_ear="Nourish. Earring +1",
+		head="Kaykaus Mitra +1",neck="Clr. Torque +2",left_ear="Glorious Earring",right_ear="Meili Earring",
 		body="Theo. Bliaut +3",hands="Theophany Mitts +3",left_ring="Janniston Ring",right_ring="Menelaus's Ring",
-		back={name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Cure" potency +10%','Damage taken-5%',}},
+		back={name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Cure" potency +10%','Damage taken-5%',}},
 		waist="Shinjutsu-no-Obi +1",legs="Ebers Pant. +1",feet="Kaykaus Boots +1",
 	}
 	sets.mid.affsolcure = set_combine(sets.mid.cure,{
@@ -213,6 +229,7 @@ function get_sets()
 	-- potency II > potency (50%) > (1mnd = 3vit = 5heal_skill) > enmity > consmp > *
 	sets.mid.cura = set_combine(sets.mid.cure, {
 		sub="Ammurapi Shield",
+		right_ear="Regal Earring",
 	})
 
 	-- Status removals
@@ -227,17 +244,19 @@ function get_sets()
 		main="Yagrush",sub="Thuellaic Ecu +1",ammo="Hasty Pinion +1",
 		head="Vanya Hood",neck="Debilis Medallion",left_ear="Beatific Earring",right_ear="Meili Earring",
 		body="Ebers Bliaut +1",hands="Fanatic Gloves",left_ring="Haoma's Ring",right_ring="Menelaus's Ring",
-		back={name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Cure" potency +10%','Damage taken-5%',}},
+		back={name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Cure" potency +10%','Damage taken-5%',}},
 		waist="Bishop's Sash",legs="Th. Pant. +3",feet="Vanya Clogs",
 	}
 
 	--Enhancing default
 	sets.mid.enh = set_combine(sets.mid.conserve,{
 		main="Gada",sub="Ammurapi Shield",
-		hands="Telchine Gloves",left_ring="Stikini Ring +1",
-		waist="Embla Sash",legs="Telchine Braconi",feet="Telchine Pigaches",
+		hands={name="Telchine Gloves", augments={'Mag. Evasion+20','"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
+		left_ring="Stikini Ring +1",waist="Embla Sash",
+		legs={name="Telchine Braconi", augments={'Mag. Evasion+20','"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
+		feet={name="Telchine Pigaches", augments={'Mag. Evasion+20','"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
 	})
-	-- Regen
+	-- Regen IV 63/tick, ~3.5min
 	-- potency/duration > duration sec > duration % > conserve mp > haste
 	sets.mid.regen = set_combine(sets.mid.enh,{
 		main="Bolelabunga",
@@ -248,41 +267,32 @@ function get_sets()
 	sets.mid["Auspice"] = set_combine(sets.mid.enh,{
 		feet="Ebers Duckbills +1",
 	})
-	-- boost spells need 500 enh to max out; 394 naked, or 420 with LA
-	-- gada 18
-	-- befouled crown 16
-	-- mimir earring 10
-	-- incanter's torque 10
-	-- telchine chasuble 12
-	-- inyanga dastanas 20
-	-- stikini 8
-	-- piety pantaloons 26
-	-- theo duckbills 21 (+10% dur)
-	-- current: 499
+	sets.mid["Aquaveil"] = set_combine(sets.mid.enh,{
+		head="Chironic Hat",
+	})
+	-- 500 cap for boost spells and barspells
+	-- current: 507 (414 naked, or 440 naked + Light Arts)
 	sets.mid.enhskill = set_combine(sets.mid.enh,{
 		right_ear="Mimir Earring",
-		feet="Theo. Duckbills +3",
 	})
 	-- potency > enh_skill/duration > conserve mp > haste
 	sets.mid.barelement = set_combine(sets.mid.enhskill,{
-		head="Ebers Cap +1",
-		body="Ebers Bliaut +1",hands="Ebers Mitts +1",
-		legs="Piety Pantaln. +3",feet="Ebers Duckbills +1",
+		legs="Piety Pantaln. +3",
 	})
 	sets.mid.affsolbar = set_combine(sets.mid.barelement,{
-		back={name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Cure" potency +10%','Damage taken-5%',}},
+		body="Ebers Bliaut +1",
+		back={name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Cure" potency +10%','Damage taken-5%',}},
 	})
 
 	-- enfeebles: skill/macc > stats > etc
 	sets.mid.enfeeb = {
-		main="Contemplator +1",sub="Enki Strap",ammo="Pemphredo Tathlum",
-		head=empty,neck="Erra Pendant",left_ear="Digni. Earring",right_ear="Malignance Earring",
-		body="Cohort Cloak +1",hands="Kaykaus Cuffs +1",left_ring="Kishar Ring",right_ring="Metamor. Ring +1",
+		main="Yagrush",sub="Ammurapi Shield",ammo="Pemphredo Tathlum",
+		head="Theophany Cap +3",neck="Erra Pendant",left_ear="Regal Earring",right_ear="Malignance Earring",
+		body="Theo. Bliaut +3",hands="Kaykaus Cuffs +1",left_ring="Kishar Ring",right_ring="Metamor. Ring +1",
 		back="Aurist's Cape +1",waist="Luminary Sash",legs="Chironic Hose",feet="Theo. Duckbills +3",
 	}
 	sets.mid.mndenfeeb = sets.mid.enfeeb
 	sets.mid.intenfeeb = set_combine(sets.mid.enfeeb,{
-		left_ear="Digni. Earring",
 		hands="Inyan. Dastanas +2",
 		waist="Eschan Stone",
 	})
@@ -296,29 +306,62 @@ function get_sets()
 	sets.mid["Flash"] = sets.mid.divine
 
 	-- nukes
-	-- Banish/holy: MAB/burst > macc/divine > MND
-	sets.mid.mndnukedefault = set_combine(sets.mid.mndenfeeb,{
-		main="Daybreak",sub="Ammurapi Shield",
-		neck="Saevus Pendant +1",left_ear="Friomisi Earring",
-		hands="Chironic Gloves",left_ring="Stikini Ring +1",
-		waist="Refoccilation Stone",legs="Kaykaus Tights +1",feet="Chironic Slippers",
+	-- Banish/holy: MAB/burst > MND > macc/divine
+	sets.mid.mndnuke_balanced = set_combine(sets.mid.mndenfeeb,{
+		main="Daybreak",
+		neck="Clr. Torque +2",
+		hands={name="Chironic Gloves", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','Spell interruption rate down -7%','CHR+4','Mag. Acc.+5','"Mag.Atk.Bns."+15',}},
+		left_ring="Stikini Ring +1",
+		waist="Orpheus's Sash",legs="Bunzi's Pants",feet="Chironic Slippers",
 	})
-	sets.mid.mndnukeburst = set_combine(sets.mid.mndnukedefault,{
-		neck="Mizu. Kubikazari",left_ear="Static Earring",
-		left_ring="Mujin Band",
+	sets.mid.mndnuke_potency = set_combine(sets.mid.mndnuke_balanced,{
+		neck="Saevus Pendant +1",
+		left_ring="Levia. Ring +1",
+		legs="Kaykaus Tights +1",
 	})
-	sets.mid.mndnuke = sets.mid.mndnukedefault
-	sets.mid.intnukedefault = set_combine(sets.mid.intenfeeb,{
+	sets.mid.mndnuke_accuracy = set_combine(sets.mid.mndnuke_balanced,{
+		head="Theophany Cap +3",
+		body="Theo. Bliaut +3",
+		legs="Chironic Hose",
+	})
+	sets.mid.mndnukeburst = set_combine(sets.mid.mndnuke_balanced,{
+		head="Bunzi's Hat",
+		body="Bunzi's Robe",hands="Bunzi's Gloves",
+		legs="Bunzi's Pants",feet="Bunzi's Sabots",
+	})
+	sets.mid.mndnuke = sets.mid.mndnuke_balanced
+	sets.mid.intnuke_balanced = set_combine(sets.mid.intenfeeb,{
 		main="Bunzi's Rod",sub="Ammurapi Shield",
-		neck="Saevus Pendant +1",left_ear="Friomisi Earring",
-		hands="Chironic Gloves",left_ring="Stikini Ring +1",
-		waist="Refoccilation Stone",legs="Volte Brais",feet="Chironic Slippers",
+		neck="Sanctity Necklace",
+		hands={name="Chironic Gloves", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','Spell interruption rate down -7%','CHR+4','Mag. Acc.+5','"Mag.Atk.Bns."+15',}},
+		left_ring="Freke Ring",
+		waist="Orpheus's Sash",legs="Volte Brais",feet="Chironic Slippers",
 	})
-	sets.mid.intnukeburst = set_combine(sets.mid.intnukedefault,{
-		neck="Mizu. Kubikazari",left_ear="Static Earring",
-		left_ring="Mujin Band",
+	sets.mid.intnuke_potency = set_combine(sets.mid.intnuke_balanced,{
+		neck="Saevus Pendant +1",
+		legs="Kaykaus Tights +1",
+	})
+	sets.mid.intnuke_accuracy = set_combine(sets.mid.intnuke_balanced,{
+		head="Theophany Cap +3",
+		body="Theo. Bliaut +3",
+		legs="Chironic Hose",
+	})
+	sets.mid.intnukeburst = set_combine(sets.mid.intnuke_balanced,{
+		head="Bunzi's Hat",
+		body="Bunzi's Robe",hands="Bunzi's Gloves",
+		legs="Bunzi's Pants",feet="Bunzi's Sabots",
 	})
 	sets.mid.intnuke = sets.mid.intnukedefault
+	sets.mid.impact = set_combine(sets.mid.enfeeb,{
+		head=empty,body="Twilight Cloak",left_ring="Stikini Ring +1",
+	})
+
+	sets.mid.dark = set_combine(sets.mid.intenfeeb,{
+		main="Rubicundity",sub="Ammurapi Shield",
+		head="Pixie Hairpin +1",neck="Erra Pendant",
+		body="Theo. Bliaut +3",hands="Inyan. Dastanas +2",left_ring="Stikini Ring +1",right_ring="Evanescence Ring",
+		waist="Fucho-no-Obi",
+	})
 
 	-- Job ability bonuses
 	sets.mid["Benediction"] = {
@@ -368,11 +411,17 @@ function variant_sets()
 	end
 	-- nuke mode swaps
 	if nuke_mode == 'raw' then
-		sets.mid.mndnuke = sets.mid.mndnukedefault
-		sets.mid.intnuke = sets.mid.intnukedefault
+		sets.mid.mndnuke = sets.mid.mndnuke_balanced
+		sets.mid.intnuke = sets.mid.intnuke_balanced
 	else
 		sets.mid.mndnuke = sets.mid.mndnukeburst
-		sets.mid.mndnuke = sets.mid.mndnukeburst
+		sets.mid.intnuke = sets.mid.intnukeburst
+	end
+	-- cursna
+	if cursna_mode == 'gambanteinn' then
+		sets.mid["Cursna"] = set_combine(sets.mid["Cursna"],{main="Gambanteinn",})
+	else
+		sets.mid["Cursna"] = set_combine(sets.mid["Cursna"],{main="Yagrush",})
 	end
 end
 
@@ -380,7 +429,7 @@ function precast(action)
 	if engage_mode == 'melee' then
 		checktp(action)
 	end
-	if action.type:contains('Magic') then
+	if in_array(action.type, magictypes) then
 		if sets.pre[action.name] then
 			equip(sets.pre[action.name])
 		elseif in_array(action.name, quickspells) then
@@ -389,6 +438,8 @@ function precast(action)
 			equip(sets.pre.na)
 		elseif action.name == "Dispelga" then
 			equip(set_combine(sets.pre.default,{main="Daybreak",sub="Ammurapi Shield",}))
+		elseif action.name == "Impact" then
+			equip(set_combine(sets.pre.default,{head=empty,body="Twilight Cloak",}))
 		else
 			equip(sets.pre.default)
 		end
@@ -411,7 +462,7 @@ function midcast(action)
 	if engage_mode == 'melee' then
 		checktp(action)
 	end
-	if action.type:contains('Magic') then
+	if in_array(action.type, magictypes) then
 		if action.name:contains('Cure') then
 			-- cures need afflatus solace handling
 			if buffactive['Afflatus Solace'] then
@@ -468,7 +519,13 @@ function midcast(action)
 			equip(sets.mid.mndnuke)
 		-- elemental magic
 		elseif action.skill == 'Elemental Magic' then
-			equip(sets.mid.intnuke)
+			if action.name == "Impact" then
+				equip(sets.mid.impact)
+			else
+				equip(sets.mid.intnuke)
+			end
+		elseif action.skill == 'Dark Magic' then
+			equip(sets.mid.dark)
 		-- anything with a specific set, including JAs
 		elseif sets.mid[action.name] then
 			equip(sets.mid[action.name])

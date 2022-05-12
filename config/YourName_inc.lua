@@ -28,7 +28,7 @@
 --		hotkey: [Ctrl]+[Del]
 --	nuke_mode
 --		Controls raw nuke versus magic bursting
---		default: raw (|| burst)
+--		default: burst (|| raw)
 --		hotkey: [Ctrl]+[n]
 
 windower.raw_register_event('zone change',function()
@@ -68,7 +68,8 @@ function startup(jobnum, blinking, defaultmode)
 	_G.dd_state = "balanced"
 	_G.dt_state = "balanced"
 	_G.dt_type = "balanced"
-	_G.nuke_mode = "raw"
+	_G.nuke_mode = "burst"
+	_G.cursna_mode = "yagrush"
 	if defaultmode == "melee" then
 		_G.engage_mode = "melee"
 	else
@@ -93,11 +94,20 @@ function file_unload()
 	send_command('unbind ^.')
 	send_command('unbind ^delete')
 	send_command('unbind ^n')
+	send_command('unbind ^g')
 end
 
 function self_command(cmd)
 	-- handle keybound state changes
-	if cmd == 'nuke toggle' then
+	-- job-specific commands first
+	if cmd == 'gambanteinn toggle' then
+		if _G.cursna_mode == "yagrush" then
+			_G.cursna_mode = "gambanteinn"
+		else
+			_G.cursna_mode = "yagrush"
+		end
+	-- job-agnostic commands
+	elseif cmd == 'nuke toggle' then
 		if _G.nuke_mode == "raw" then
 			_G.nuke_mode = "burst"
 		else
@@ -126,20 +136,25 @@ function self_command(cmd)
 	elseif cmd == 'engage toggle' then
 		if _G.engage_mode == 'caster' then
 			_G.engage_mode = "melee"
-			send_command('dressup blinking all all off')
+			--send_command('dressup blinking all all off')
 		else
 			_G.engage_mode = "caster"
 			send_command('gs enable all')
 			send_command('dressup blinking all always on')
 		end
 	end
-	send_command('@input /echo === MODE: ' ..
+	-- Show a status message, augmented with job-specific info
+	status_msg = '@input /echo === MODE: ' ..
 		_G.engage_mode:sub(1,1):upper() .. _G.engage_mode:sub(2) .. ' + ' ..
 		_G.nuke_mode:sub(1,1):upper() .. _G.nuke_mode:sub(2) ..
 		', DD: ' .. _G.dd_state:sub(1,1):upper() .. _G.dd_state:sub(2) ..
 		', DT: ' .. _G.dt_state:sub(1,1):upper() .. _G.dt_state:sub(2) ..
 		'/' .. _G.dt_type:sub(1,1):upper() .. _G.dt_type:sub(2)
-	)
+	if player.main_job == 'WHM' then
+		status_msg = status_msg .. ', Cursna: ' .. _G.cursna_mode:sub(1,1):upper() .. _G.cursna_mode:sub(2)
+	end
+	send_command(status_msg)
+	-- Determine and equip new sets based on state
 	variant_sets()
 	if player.status == 'Engaged' then
 		if sets.tpdw and (player.sub_job == "NIN" or player.sub_job == "DNC") then
@@ -150,6 +165,15 @@ function self_command(cmd)
 	else
 		equip(sets.idle)
 	end
+end
+
+function checkEnspell()
+	-- check for any Enspell
+	if buffactive['Enstone'] or buffactive['Enthunder'] or buffactive['Enwater'] or
+	buffactive['Enfire'] or buffactive['Enblizzard'] or buffactive['Enaero'] then
+		return true
+	end
+	return false
 end
 
 function checktp(spell)
@@ -191,16 +215,23 @@ function aftercast(action)
 end
 
 function status_change(new,old)
-	-- largely mirrors aftercast()
 	-- automatically swap sets for enaged/idle/resting
 	if engage_mode == 'melee' then
 		checktp(nil)
 	end
 	if new == 'Engaged' then
 		if sets.tpdw and (player.sub_job == "NIN" or player.sub_job == "DNC") then
-			equip(sets.tpdw)
+			if player.main_job == "RDM" and checkEnspell() then
+				equip(sets.entpdw)
+			else
+				equip(sets.tpdw)
+			end
 		else
-			equip(sets.tp)
+			if player.main_job == "RDM" and checkEnspell() then
+				equip(sets.entp)
+			else
+				equip(sets.tp)
+			end
 		end
 	elseif new == 'Resting' then
 		equip(sets.restMP)
@@ -214,18 +245,27 @@ function status_change(new,old)
 end
 
 function buff_change(buffname,gain)
-	-- this will not preserve TP
+	-- Auto-equip idle set (typically DT gear) when disabled
 	if gain then
-		if buffname == 'sleep' or buffname == 'petrification' or buffname == 'terror' or buffname == 'stun' then
+		if (buffname == 'sleep' or buffname == 'petrification' or buffname == 'terror' or buffname == 'stun') and
+		((player.status == 'Engaged' and player.tp <= 1000) or player.status ~= "Engaged") then
 			equip(sets.idle)
 		end
 	else
-		if buffname == 'sleep' or buffname == 'petrification' or buffname == 'terror' or buffname == 'stun' then
+		if (buffname == 'sleep' or buffname == 'petrification' or buffname == 'terror' or buffname == 'stun') then
 			if player.status == 'Engaged' then
 				if sets.tpdw and (player.sub_job == "NIN" or player.sub_job == "DNC") then
-					equip(sets.tpdw)
+					if player.main_job == "RDM" and checkEnspell() then
+						equip(sets.entpdw)
+					else
+						equip(sets.tpdw)
+					end
 				else
-					equip(sets.tp)
+					if player.main_job == "RDM" and checkEnspell() then
+						equip(sets.entp)
+					else
+						equip(sets.tp)
+					end
 				end
 			else
 				equip(sets.idle)
@@ -254,16 +294,17 @@ function checktpbonus(ws)
 end
 
 function checkelement(action, ismidcast)
-	-- maybe use debug.getinfo(2, 'n').name instead of ismidcast
-
-	-- overrides weapon/neck/waist slots for weather bonuses when called
-	-- skips if:
-	--   action is opposite of day and weather intensity is only 1
-	--   action is opposite of actual weather AND there's no personal weather
+	-- Overrides weapon/neck/waist/ring slots for weather bonuses when called
+	-- Skips if:
+	--   * Action is opposite of day and weather intensity is only 1
+	--   * Action is opposite of actual weather AND there's no personal weather
+	--   * Casting Impact
 	if (world.day_element == opposing_elements[action.element] and world.weather_intensity == 1) or
-	(world.weather_element == opposing_elements[action.element] and world.weather_id == world.real_weather_id) then
+	(world.weather_element == opposing_elements[action.element] and world.weather_id == world.real_weather_id) or
+	action.name == 'Impact' then
 		return
 	end
+	validnuketypes = {'Elemental Magic','Dark Magic','Blue Magic','Ninjutsu',}
 	if action.element == world.weather_element or action.element == world.day_element then
 		if not ismidcast and action.prefix == '/weaponskill' and in_array(action.name, elemws) then
 			sets.weather = {
@@ -271,21 +312,26 @@ function checkelement(action, ismidcast)
 				waist="Hachirin-no-Obi",
 			}
 			equip(sets.weather)
-		elseif ismidcast and action.skill == 'Elemental Magic' then
-			sets.weather = {
-				waist="Hachirin-no-Obi",
-			}
-			if action.element ~= 'Dark' and action.element ~= 'Light' then
-				sets.weather = set_combine(sets.weather,{left_ring="Zodiac Ring",})
+		elseif ismidcast and in_array(action.skill, validnuketypes) then
+			-- Orpheus' Sash is better unless double weather is active
+			if world.weather_intensity == 1 then
+				return
+			end
+			-- Helices automatically gain weather benefits
+			if action.name:contains('helix') then
+				sets.weather = {back="Twilight Cape",}
+			else
+				sets.weather = {back="Twilight Cape",waist="Hachirin-no-Obi",}
 			end
 			equip(sets.weather)
 		elseif ismidcast and action.skill == 'Healing Magic' and (action.name:contains('Cure') or action.name:contains('Cura')) then
-			sets.weather = {
-				main="Chatoyant Staff",sub="Enki Strap",
-				waist="Hachirin-no-Obi",
-			}
-			-- override cape if Cura, or not WHM
-			if action.name:contains('Cura') or player.main_job ~= 'WHM' then
+			-- Ignore cape if Afflatus Solace is active AND casting a non-cura/ga cure AND job is WHM
+			if player.main_job == 'WHM' and	action.name:contains('Cure') and buffactive['Afflatus Solace'] then
+				sets.weather = {
+					main="Chatoyant Staff",sub="Enki Strap",
+					waist="Hachirin-no-Obi",
+				}
+			else
 				sets.weather = {
 					main="Chatoyant Staff",sub="Enki Strap",
 					back="Twilight Cape",waist="Hachirin-no-Obi",
@@ -317,12 +363,15 @@ opposing_elements = {
 	["Ice"] = "Fire",
 	["Wind"] = "Ice",
 }
-quickspells = T{
+magictypes = {
+	"WhiteMagic","BlackMagic","BlueMagic","Geomancy","Ninjutsu","BardSong","SummonerPact","Trust",
+}
+quickspells = {
 	"Raise","Raise II","Raise III","Arise","Reraise","Reraise II","Reraise III","Reraise IV",
 	"Teleport-Mea","Teleport-Dem","Teleport-Holla","Teleport-Altep","Teleport-Yhoat","Teleport-Vahzl","Recall-Meriph","Recall-Jugner","Recall-Pashh",
 	"Warp","Warp II","Escape","Tractor","Retrace",
 }
-enhspells = T{
+enhspells = {
 	"Aquaveil","Haste","Blink","Stoneskin","Invisible","Sneak","Deodorize","Auspice",
 	"Phalanx","Phalanx II","Temper","Refresh","Refresh II","Haste II","Flurry","Flurry II",
 	"Animus Augeo","Animus Minuo","Adloquium","Embrava",
@@ -334,7 +383,7 @@ enhspells = T{
 	"Enfire","Enblizzard","Enaero","Enstone","Enthunder","Enwater",
 	"Enfire II","Enblizzard II","Enaero II","Enstone II","Enthunder II","Enwater II",
 }
-enhskillspells = T{
+enhskillspells = {
 	"Boost-STR","Boost-DEX","Boost-VIT","Boost-AGI","Boost-INT","Boost-MND","Boost-CHR",
 	"Gain-STR","Gain-DEX","Gain-VIT","Gain-AGI","Gain-INT","Gain-MND","Gain-CHR",
 	"Baraera","Barstonra","Barthundra","Barwatera","Barfira","Barblizzara",
@@ -343,62 +392,67 @@ enhskillspells = T{
 	"Barsleep","Barpoison","Barparalyze","Barblind","Barsilence","Barpetrify","Barvirus","Baramnesia",
 	"Enfire","Enblizzard","Enaero","Enstone","Enthunder","Enwater",
 	"Enfire II","Enblizzard II","Enaero II","Enstone II","Enthunder II","Enwater II",
+	"Embrava",
 }
-enspells = T{
+maxenhspells = {
 	"Enfire","Enblizzard","Enaero","Enstone","Enthunder","Enwater",
 	"Enfire II","Enblizzard II","Enaero II","Enstone II","Enthunder II","Enwater II",
+	"Temper","Temper II",
 }
-gainspells = T{
+gainspells = {
 	"Gain-STR","Gain-DEX","Gain-VIT","Gain-AGI","Gain-INT","Gain-MND","Gain-CHR",
 }
-barspells = T{
+barspells = {
 	"Baraera","Barstonra","Barthundra","Barwatera","Barfira","Barblizzara",
 	"Baraero","Barstone","Barthunder","Barwater","Barfire","Barblizzard",
 	"Barsleepra","Barpoisonra","Barparalyzra","Barblindra","Barsilencera","Barpetra","Barvira","Baramnesra",
 	"Barsleep","Barpoison","Barparalyze","Barblind","Barsilence","Barpetrify","Barvirus","Baramnesia",
 }
-barelemspells = T{
+barelemspells = {
 	"Baraera","Barstonra","Barthundra","Barwatera","Barfira","Barblizzara",
 	"Baraero","Barstone","Barthunder","Barwater","Barfire","Barblizzard",
 }
-enhstorms = T{
+enhstorms = {
 	"Sandstorm","Rainstorm","Windstorm","Firestorm","Hailstorm","Thunderstorm","Voidstorm","Aurorastorm",
 	"Sandstorm II","Rainstorm II","Windstorm II","Firestorm II","Hailstorm II","Thunderstorm II","Voidstorm II","Aurorastorm II",
 }
-naspells = T{
+naspells = {
 	"Poisona","Paralyna","Blindna","Silena","Stona","Viruna","Cursna","Erase",
 }
-mndnukes = T{
+mndnukes = {
 	"Banish","Banish II","Banish III","Banishga","Banishga II","Holy","Holy II",
 }
-mndenfeebles = T{
+mndenfeebles = {
 	"Addle","Addle II","Dia","Dia II","Dia III","Diaga","Distract","Distract II","Distract III",
 	"Frazzle","Frazzle II","Frazzle III","Paralyze","Paralyze II","Silence","Slow","Slow II",
 }
-intenfeebles = T{
+intenfeebles = {
 	"Bind","Blind","Blind II","Break","Breakga","Dispel","Dispelga",
 	"Gravity","Gravity II","Poison","Poison II","Poisonga",
 	"Sleep","Sleep II","Sleepga","Sleepga II",
 }
-accenfeebles = T{
-	"Bind","Break","Dispel","Frazzle","Frazzle II","Gravity","Gravity II","Poison","Poison II",
-	"Silence","Sleep","Sleep II","Sleepga","Sleepga II",
+accenfeebles = {
+	"Bind","Break","Dispel","Distract","Distract II","Frazzle","Frazzle II","Gravity","Gravity II",
+	"Poison","Poison II","Silence","Sleep","Sleep II","Sleepga","Sleepga II",
 }
-potenfeebles = T{
-	"Addle","Addle II","Blind","Blind II","Distract","Distract II","Distract III",
+potenfeebles = {
+	"Addle","Addle II","Blind","Blind II","Distract III","Frazzle III",
 	"Paralyze","Paralyze II","Slow","Slow II",
 }
-darkenfeebles = T{
+elemenfeebles = {
+	"Burn","Choke","Drown","Frost","Impact","Rasp","Shock",
+}
+darkenfeebles = {
 	"Bio","Bio II","Bio III","Stun",
 	"Absorb-ACC","Absorb-AGI","Absorb-Attri","Absorb-CHR","Absorb-DEX","Absorb-INT","Absorb-MND","Absorb-STR","Absorb-TP","Absorb-VIT",
 }
-darknukes = T{
+darknukes = {
 	"Aspir","Aspir II","Aspir III","Drain","Drain II","Drain III","Death","Kaustra",
 }
-darkenhspells = T{
+darkenhspells = {
 	"Dread Spikes","Endark","Endark II",
 }
-ftpws = T{
+ftpws = {
 	"Ascetic's Fury","Asuran Fists","Backhand Blow","Blade: Jin","Blade: Ku","Blade: Shun",
 	"Chant du Cygne","Combo","Dancing Edge","Decimation","Dragon Kick","Entropy","Evisceration",
 	"Extenterator","Hexa Strike","Howling Fist","Jishnu's Radiance","Last Stand","One Inch Punch",
@@ -406,7 +460,7 @@ ftpws = T{
 	"Shijin Spiral","Shoulder Tackle","Spinning Attack","Stardiver","Stringing Pummel","Swift Blade",
 	"Tornado Kick","Victory Smite","Vorpal Blade",
 }
-elemws = T{
+elemws = {
 	"Burning Blade","Red Lotus Blade","Tachi: Kagero","Flaming Arrow","Hot Shot","Wildfire",
 	"Blade: Chi","Rock Crusher","Earth Crusher",
 	"Blade: Teki","Blade: Yu",
@@ -417,7 +471,7 @@ elemws = T{
 	"Energy Steal","Energy Drain","Sanguine Blade","Dark Harvest","Shadow of Death","Infernal Scythe","Blade: Ei","Cataclysm","Vidohunir","Omniscience","Leaden Salute",
 }
 -- These aren't 100% known, but extrapolated from WS that don't say "Damage/crit varies by TP"
-tpbreakpointws = T{
+tpbreakpointws = {
 	"Shoulder Tackle","One Inch Punch","Spinning Attack","Asuran Fists","Shijin Spiral","Final Heaven",
 	"Wasp Sting","Shadowstitch","Viper Bite","Energy Steal","Energy Drain","Dancing Edge","Extenterator","Mercy Stroke","Mordant Rime","Pyrrhic Kleos",
 	"Flat Blade","Circle Blade","Spirits Within","Swift Blade","Sanguine Blade","Requiescat","Knights of Round","Death Blossom",
@@ -433,12 +487,12 @@ tpbreakpointws = T{
 	"Piercing Arrow","Sidewinder","Blast Arrow","Apex Arrow",
 	"Split Shot","Slug Shot","Blast Shot","Numbing Shot","Wildfire",
 }
-dncsteps = T{
-	"Box Step","Feather Step","Quickstep","Stuter Step",
+dncsteps = {
+	"Box Step","Feather Step","Quickstep","Stutter Step",
 }
-dncwaltzes = T{
+dncwaltzes = {
 	"Curing Waltz","Curing Waltz II","Curing Waltz III","Curing Waltz IV","Curing Waltz V","Divine Waltz","Divine Waltz II",
 }
-fuchojobs = T{
+fuchojobs = {
 	"MNK","WHM","BLM","RDM","PLD","BRD","RNG","SMN","BLU","PUP","SCH","GEO","RUN",
 }
