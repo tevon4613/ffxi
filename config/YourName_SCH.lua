@@ -1,10 +1,10 @@
 include('organizer-lib')
-include('Temas_inc.lua')
+include('YourName_inc.lua')
 
 function get_sets()
 	-- Sets up a lot of stuff: (job number, dressup castmode, default mode)
 	-- The job number must match the job's lockstyle and macro book.
-	-- See Temas_inc.lua for details.
+	-- See YourName_inc.lua for details.
 	startup(4, true, "caster")
 	-- Sets that end in "base" are modified in variant_sets() depending on
 	-- DT/DD/nuke/etc modes. The sets in this function correspond to the
